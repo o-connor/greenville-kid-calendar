@@ -136,7 +136,6 @@ def library_events(start_day: date, end_day: date) -> tuple[list[Event], list[st
             page = fetch_text(url)
             matches = pattern.findall(page)
             if not matches:
-                errors.append(f"Library series returned no calendar records: {slug}")
                 continue
             for encoded in matches:
                 try:
