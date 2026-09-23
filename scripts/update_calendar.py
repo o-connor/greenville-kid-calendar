@@ -48,6 +48,17 @@ TCMU_RULES = (
     ("toddler time", ""),
 )
 
+UPCOUNTRY_RULES = (
+    ("toddler time", "[2+] "),
+    ("family fun day", ""),
+    ("neighborhood night", ""),
+)
+
+M_JUDSON_CATEGORY_URL = (
+    "https://kiddingaroundgreenville.com/events/categories/toddler-preschool"
+)
+M_JUDSON_LOCATION = "M. Judson Booksellers"
+
 
 @dataclass(frozen=True)
 class Event:
@@ -87,7 +98,12 @@ def parse_ics_datetime(value: str, params: str = "") -> datetime:
     return datetime.strptime(value, "%Y%m%dT%H%M%S").replace(tzinfo=TZ)
 
 
-def parse_single_vevent(ics_text: str, source_url: str, label: str) -> Event | None:
+def parse_single_vevent(
+    ics_text: str,
+    source_url: str,
+    label: str,
+    source: str = "Greenville County Library",
+) -> Event | None:
     inside = False
     props: dict[str, tuple[str, str]] = {}
     for line in unfold_ics(ics_text):
@@ -113,7 +129,7 @@ def parse_single_vevent(ics_text: str, source_url: str, label: str) -> Event | N
     description = html.unescape(props.get("DESCRIPTION", ("", ""))[1]).replace("\\n", " ")
     description = description.replace("\\,", ",").replace("\\;", ";")
     return Event(
-        source="Greenville County Library",
+        source=source,
         title=title,
         start=parse_ics_datetime(props["DTSTART"][1], props["DTSTART"][0]),
         end=parse_ics_datetime(props["DTEND"][1], props["DTEND"][0]),
@@ -235,12 +251,121 @@ def tcmu_events(start_day: date, end_day: date) -> tuple[list[Event], list[str]]
     return events, errors
 
 
+def upcountry_label(title: str) -> str | None:
+    lowered = title.casefold()
+    for phrase, label in UPCOUNTRY_RULES:
+        if phrase in lowered:
+            return label
+    return None
+
+
+def upcountry_events(start_day: date, end_day: date) -> tuple[list[Event], list[str]]:
+    params = urllib.parse.urlencode(
+        {
+            "start_date": f"{start_day.isoformat()} 00:00:00",
+            "end_date": f"{end_day.isoformat()} 23:59:59",
+            "per_page": 100,
+        }
+    )
+    url = f"https://upcountryhistory.org/wp-json/tribe/events/v1/events?{params}"
+    try:
+        items = json.loads(fetch_text(url)).get("events", [])
+    except Exception as exc:
+        return [], [f"Upcountry History Museum fetch failed: {exc}"]
+
+    events: list[Event] = []
+    errors: list[str] = []
+    for item in items:
+        title = clean_html(item.get("title", ""))
+        label = upcountry_label(title)
+        if label is None:
+            continue
+        try:
+            start = datetime.fromisoformat(item["start_date"]).replace(tzinfo=TZ)
+            end = datetime.fromisoformat(item["end_date"]).replace(tzinfo=TZ)
+        except (KeyError, ValueError) as exc:
+            errors.append(f"Upcountry record parse error ({title}): {exc}")
+            continue
+        venue = item.get("venue") if isinstance(item.get("venue"), dict) else {}
+        address_bits = [
+            venue.get("venue", "Upcountry History Museum"),
+            venue.get("address", "540 Buncombe Street"),
+            venue.get("city", "Greenville"),
+            venue.get("state", "SC"),
+            venue.get("zip", "29601"),
+        ]
+        events.append(
+            Event(
+                source="Upcountry History Museum",
+                title=f"{label}{title}",
+                start=start,
+                end=end,
+                location=", ".join(str(bit).strip() for bit in address_bits if bit),
+                description=clean_html(item.get("description", ""))[:800],
+                url=item.get("url", "https://upcountryhistory.org/calendar/"),
+            )
+        )
+    return events, errors
+
+
+def m_judson_events(start_day: date, end_day: date) -> tuple[list[Event], list[str]]:
+    """Read only M. Judson storytimes from Kidding Around's toddler calendar."""
+    events: list[Event] = []
+    errors: list[str] = []
+    try:
+        first_page = fetch_text(M_JUDSON_CATEGORY_URL)
+    except Exception as exc:
+        return [], [f"M. Judson listing fetch failed: {exc}"]
+
+    page_numbers = [
+        int(value) for value in re.findall(r"[?&]pno=(\d+)", first_page)
+    ]
+    last_page = min(max(page_numbers, default=1), 10)
+    pages = [first_page]
+    for page_number in range(2, last_page + 1):
+        try:
+            pages.append(fetch_text(f"{M_JUDSON_CATEGORY_URL}?pno={page_number}"))
+        except Exception as exc:
+            errors.append(f"M. Judson listing page {page_number} failed: {exc}")
+
+    event_urls = sorted(
+        {
+            html.unescape(url).rstrip("/")
+            for page in pages
+            for url in re.findall(
+                r'href=["\'](https://kiddingaroundgreenville\.com/events/'
+                r'storytime-on-the-steps[^"\']*)["\']',
+                page,
+                flags=re.IGNORECASE,
+            )
+        }
+    )
+    for event_url in event_urls:
+        try:
+            event = parse_single_vevent(
+                fetch_text(f"{event_url}/ical/"),
+                event_url,
+                "",
+                source="M. Judson Booksellers",
+            )
+        except Exception as exc:
+            errors.append(f"M. Judson record fetch failed ({event_url}): {exc}")
+            continue
+        if not event:
+            errors.append(f"M. Judson record parse failed ({event_url})")
+            continue
+        event_day = event.start.astimezone(TZ).date()
+        if start_day <= event_day <= end_day and M_JUDSON_LOCATION in event.location:
+            events.append(event)
+    return events, errors
+
+
 def deduplicate(events: list[Event]) -> list[Event]:
     unique: dict[tuple[str, str, str], Event] = {}
     for event in events:
         key = (
             event.start.astimezone(TZ).isoformat(),
-            re.sub(r"^\[(?:18m\+|2\+)\]\s*", "", event.title).casefold(),
+            re.sub(r"^\[(?:18m\+|2\+|3\+)\]\s*", "", event.title).casefold(),
             event.location.casefold(),
         )
         unique[key] = event
@@ -472,8 +597,10 @@ def render_index(events: list[Event], generated_at: datetime, errors: list[str])
         <ul>
           <li>Greenville County Library — Hughes Main Library</li>
           <li>The Children's Museum of the Upstate — Greenville</li>
+          <li>Upcountry History Museum — Heritage Green</li>
+          <li>M. Judson Booksellers — Storytime on the Steps</li>
         </ul>
-        <p>Events marked <strong>[18m+]</strong> or <strong>[2+]</strong> are stretch options based on the organizer's stated age range.</p>
+        <p>Events marked <strong>[18m+]</strong>, <strong>[2+]</strong>, or <strong>[3+]</strong> are stretch options based on the organizer's stated age range.</p>
       </div>
       <div>
         <h2>Greenville Zoo</h2>
@@ -493,8 +620,10 @@ def main() -> None:
 
     library, library_errors = library_events(start_day, end_day)
     tcmu, tcmu_errors = tcmu_events(start_day, end_day)
-    errors = library_errors + tcmu_errors
-    events = deduplicate(library + tcmu)
+    upcountry, upcountry_errors = upcountry_events(start_day, end_day)
+    m_judson, m_judson_errors = m_judson_events(start_day, end_day)
+    errors = library_errors + tcmu_errors + upcountry_errors + m_judson_errors
+    events = deduplicate(library + tcmu + upcountry + m_judson)
     if not events:
         raise RuntimeError("No events were found; refusing to replace the published feed.")
 
@@ -510,7 +639,12 @@ def main() -> None:
                 "window_start": start_day.isoformat(),
                 "window_end": end_day.isoformat(),
                 "event_count": len(events),
-                "source_counts": {"library": len(library), "tcmu": len(tcmu)},
+                "source_counts": {
+                    "library": len(library),
+                    "tcmu": len(tcmu),
+                    "upcountry_history_museum": len(upcountry),
+                    "m_judson": len(m_judson),
+                },
                 "warnings": errors,
             },
             indent=2,
@@ -518,7 +652,11 @@ def main() -> None:
         + "\n",
         encoding="utf-8",
     )
-    print(f"Published {len(events)} events ({len(library)} library, {len(tcmu)} TCMU).")
+    print(
+        f"Published {len(events)} events "
+        f"({len(library)} library, {len(tcmu)} TCMU, "
+        f"{len(upcountry)} Upcountry, {len(m_judson)} M. Judson)."
+    )
     for warning in errors:
         print(f"WARNING: {warning}")
 

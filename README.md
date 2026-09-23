@@ -8,8 +8,10 @@ The feed covers the next 45 days and refreshes daily through GitHub Actions. It 
 
 - Greenville County Library programs at Hughes Main Library
 - The Children's Museum of the Upstate in Greenville
+- Toddler and family programs at Upcountry History Museum
+- Storytime on the Steps at M. Judson Booksellers
 
-Events whose official minimum age is above one are labeled `[18m+]` or `[2+]`.
+Events whose official minimum age is above one are labeled `[18m+]`, `[2+]`, or `[3+]`.
 
 ## Apple Calendar
 
