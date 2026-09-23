@@ -10,6 +10,7 @@ import json
 import re
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
@@ -54,10 +55,19 @@ UPCOUNTRY_RULES = (
     ("neighborhood night", ""),
 )
 
-M_JUDSON_CATEGORY_URL = (
+KAG_TODDLER_CATEGORY_URL = (
     "https://kiddingaroundgreenville.com/events/categories/toddler-preschool"
 )
-M_JUDSON_LOCATION = "M. Judson Booksellers"
+KAG_DOWNTOWN_LOCATION_URL = (
+    "https://kiddingaroundgreenville.com/locations/downtown-greenville"
+)
+
+KAG_HUGHES_RULES = (
+    ("lollipops concert", "[3+] "),
+    ("musical jamboree", "[18m+] "),
+    ("not-so-spooky toddler tales", "[18m+] "),
+    ("spooky goose", ""),
+)
 
 
 @dataclass(frozen=True)
@@ -125,9 +135,10 @@ def parse_single_vevent(
     title = html.unescape(props["SUMMARY"][1]).strip()
     if label and not title.startswith(label.strip()):
         title = f"{label}{title}"
-    location = html.unescape(props.get("LOCATION", ("", ""))[1]).replace("\\,", ",")
-    description = html.unescape(props.get("DESCRIPTION", ("", ""))[1]).replace("\\n", " ")
-    description = description.replace("\\,", ",").replace("\\;", ";")
+    location = props.get("LOCATION", ("", ""))[1]
+    location = html.unescape(location.replace("\\,", ",").replace("\\;", ";"))
+    description = props.get("DESCRIPTION", ("", ""))[1].replace("\\n", " ")
+    description = html.unescape(description.replace("\\,", ",").replace("\\;", ";"))
     return Event(
         source=source,
         title=title,
@@ -308,56 +319,126 @@ def upcountry_events(start_day: date, end_day: date) -> tuple[list[Event], list[
     return events, errors
 
 
-def m_judson_events(start_day: date, end_day: date) -> tuple[list[Event], list[str]]:
-    """Read only M. Judson storytimes from Kidding Around's toddler calendar."""
-    events: list[Event] = []
+def kag_event_links(page: str) -> set[str]:
+    return {
+        html.unescape(url).rstrip("/")
+        for url in re.findall(
+            r'href=["\'](https://kiddingaroundgreenville\.com/events/[^"\']+)["\']',
+            page,
+            flags=re.IGNORECASE,
+        )
+        if "/categories/" not in url
+    }
+
+
+def kag_selection(title: str, location: str) -> tuple[str, str] | None:
+    """Return a display source and age label for approved downtown-area events."""
+    lowered_title = title.casefold()
+    lowered_location = html.unescape(location).casefold()
+    if "m. judson booksellers" in lowered_location and "storytime on the steps" in lowered_title:
+        return "M. Judson Booksellers", ""
+    if "greenville zoo" in lowered_location:
+        return "Greenville Zoo", ""
+    if "south carolina children's theatre" in lowered_location:
+        return "South Carolina Children's Theatre", "[3+] "
+    if "main street" in lowered_location and "trick or treat on main street" in lowered_title:
+        return "Downtown Greenville", ""
+    if "downtown greenville" in lowered_location and "td saturday market" in lowered_title:
+        return "Downtown Greenville", ""
+    if "hughes main library" in lowered_location:
+        for phrase, label in KAG_HUGHES_RULES:
+            if phrase in lowered_title:
+                return "Greenville County Library", label
+    return None
+
+
+def kidding_around_events(start_day: date, end_day: date) -> tuple[list[Event], list[str]]:
+    """Select toddler-friendly downtown events from Kidding Around Greenville."""
     errors: list[str] = []
     try:
-        first_page = fetch_text(M_JUDSON_CATEGORY_URL)
+        first_page = fetch_text(KAG_TODDLER_CATEGORY_URL)
     except Exception as exc:
-        return [], [f"M. Judson listing fetch failed: {exc}"]
+        return [], [f"Kidding Around toddler listing fetch failed: {exc}"]
 
-    page_numbers = [
-        int(value) for value in re.findall(r"[?&]pno=(\d+)", first_page)
-    ]
+    page_numbers = [int(value) for value in re.findall(r"[?&]pno=(\d+)", first_page)]
     last_page = min(max(page_numbers, default=1), 10)
     pages = [first_page]
     for page_number in range(2, last_page + 1):
         try:
-            pages.append(fetch_text(f"{M_JUDSON_CATEGORY_URL}?pno={page_number}"))
+            pages.append(fetch_text(f"{KAG_TODDLER_CATEGORY_URL}?pno={page_number}"))
         except Exception as exc:
-            errors.append(f"M. Judson listing page {page_number} failed: {exc}")
+            errors.append(f"Kidding Around toddler page {page_number} failed: {exc}")
+    try:
+        pages.append(fetch_text(KAG_DOWNTOWN_LOCATION_URL))
+    except Exception as exc:
+        errors.append(f"Kidding Around downtown listing fetch failed: {exc}")
 
-    event_urls = sorted(
-        {
-            html.unescape(url).rstrip("/")
-            for page in pages
-            for url in re.findall(
-                r'href=["\'](https://kiddingaroundgreenville\.com/events/'
-                r'storytime-on-the-steps[^"\']*)["\']',
-                page,
-                flags=re.IGNORECASE,
-            )
-        }
-    )
-    for event_url in event_urls:
+    event_urls = sorted({url for page in pages for url in kag_event_links(page)})
+
+    def fetch_event(event_url: str) -> tuple[str, Event | None, Exception | None]:
         try:
             event = parse_single_vevent(
                 fetch_text(f"{event_url}/ical/"),
                 event_url,
                 "",
-                source="M. Judson Booksellers",
+                source="Kidding Around Greenville",
             )
+            return event_url, event, None
         except Exception as exc:
-            errors.append(f"M. Judson record fetch failed ({event_url}): {exc}")
+            return event_url, None, exc
+
+    fetched: list[tuple[str, Event | None, Exception | None]] = []
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        futures = [executor.submit(fetch_event, event_url) for event_url in event_urls]
+        for future in as_completed(futures):
+            fetched.append(future.result())
+
+    events: list[Event] = []
+    for event_url, event, error in sorted(fetched, key=lambda item: item[0]):
+        if error:
+            errors.append(f"Kidding Around record fetch failed ({event_url}): {error}")
             continue
         if not event:
-            errors.append(f"M. Judson record parse failed ({event_url})")
+            errors.append(f"Kidding Around record parse failed ({event_url})")
             continue
         event_day = event.start.astimezone(TZ).date()
-        if start_day <= event_day <= end_day and M_JUDSON_LOCATION in event.location:
-            events.append(event)
+        selection = kag_selection(event.title, event.location)
+        if not (start_day <= event_day <= end_day) or selection is None:
+            continue
+        source, label = selection
+        title = event.title
+        if label and not title.startswith(label.strip()):
+            title = f"{label}{title}"
+        events.append(
+            Event(
+                source=source,
+                title=title,
+                start=event.start,
+                end=event.end,
+                location=event.location,
+                description=event.description,
+                url=event.url,
+            )
+        )
     return events, errors
+
+
+def canonical_location(location: str) -> str:
+    lowered = html.unescape(location).casefold()
+    aliases = (
+        ("hughes main library", "hughes main library"),
+        ("m. judson booksellers", "m. judson booksellers"),
+        ("greenville zoo", "greenville zoo"),
+        ("south carolina children's theatre", "south carolina children's theatre"),
+        ("tcmu greenville", "tcmu greenville"),
+        ("upcountry history museum", "upcountry history museum"),
+        ("downtown greenville", "downtown greenville"),
+        ("main street", "downtown greenville"),
+    )
+    for fragment, canonical in aliases:
+        if fragment in lowered:
+            return canonical
+    return re.sub(r"\s+", " ", lowered).strip()
 
 
 def deduplicate(events: list[Event]) -> list[Event]:
@@ -366,9 +447,9 @@ def deduplicate(events: list[Event]) -> list[Event]:
         key = (
             event.start.astimezone(TZ).isoformat(),
             re.sub(r"^\[(?:18m\+|2\+|3\+)\]\s*", "", event.title).casefold(),
-            event.location.casefold(),
+            canonical_location(event.location),
         )
-        unique[key] = event
+        unique.setdefault(key, event)
     return sorted(unique.values(), key=lambda event: (event.start, event.title))
 
 
@@ -599,12 +680,15 @@ def render_index(events: list[Event], generated_at: datetime, errors: list[str])
           <li>The Children's Museum of the Upstate — Greenville</li>
           <li>Upcountry History Museum — Heritage Green</li>
           <li>M. Judson Booksellers — Storytime on the Steps</li>
+          <li>Greenville Zoo — toddler-friendly special events</li>
+          <li>South Carolina Children's Theatre — selected age 3+ shows</li>
+          <li>Downtown Greenville — Saturday Market and seasonal family events</li>
         </ul>
         <p>Events marked <strong>[18m+]</strong>, <strong>[2+]</strong>, or <strong>[3+]</strong> are stretch options based on the organizer's stated age range.</p>
       </div>
       <div>
-        <h2>Greenville Zoo</h2>
-        <p>The zoo does not currently provide a stable feed that can be safely merged automatically. Check its <a href="https://www.greenvillezoo.com/Calendar.aspx">official calendar</a> for zoo updates.</p>
+        <h2>How events are selected</h2>
+        <p>Official venue calendars are used when available. Kidding Around Greenville supplements them with a strict downtown venue and toddler-category filter. Organizer pages remain authoritative, so check the event link before leaving.</p>
       </div>
     </section>
   </main>
@@ -621,9 +705,9 @@ def main() -> None:
     library, library_errors = library_events(start_day, end_day)
     tcmu, tcmu_errors = tcmu_events(start_day, end_day)
     upcountry, upcountry_errors = upcountry_events(start_day, end_day)
-    m_judson, m_judson_errors = m_judson_events(start_day, end_day)
-    errors = library_errors + tcmu_errors + upcountry_errors + m_judson_errors
-    events = deduplicate(library + tcmu + upcountry + m_judson)
+    kidding_around, kidding_around_errors = kidding_around_events(start_day, end_day)
+    errors = library_errors + tcmu_errors + upcountry_errors + kidding_around_errors
+    events = deduplicate(library + tcmu + upcountry + kidding_around)
     if not events:
         raise RuntimeError("No events were found; refusing to replace the published feed.")
 
@@ -643,7 +727,26 @@ def main() -> None:
                     "library": len(library),
                     "tcmu": len(tcmu),
                     "upcountry_history_museum": len(upcountry),
-                    "m_judson": len(m_judson),
+                    "kidding_around_supplemental": len(kidding_around),
+                    "m_judson": sum(
+                        event.source == "M. Judson Booksellers"
+                        for event in kidding_around
+                    ),
+                    "greenville_zoo": sum(
+                        event.source == "Greenville Zoo" for event in kidding_around
+                    ),
+                    "sc_children_theatre": sum(
+                        event.source == "South Carolina Children's Theatre"
+                        for event in kidding_around
+                    ),
+                    "downtown_greenville": sum(
+                        event.source == "Downtown Greenville"
+                        for event in kidding_around
+                    ),
+                    "hughes_main_supplemental": sum(
+                        event.source == "Greenville County Library"
+                        for event in kidding_around
+                    ),
                 },
                 "warnings": errors,
             },
@@ -655,7 +758,7 @@ def main() -> None:
     print(
         f"Published {len(events)} events "
         f"({len(library)} library, {len(tcmu)} TCMU, "
-        f"{len(upcountry)} Upcountry, {len(m_judson)} M. Judson)."
+        f"{len(upcountry)} Upcountry, {len(kidding_around)} Kidding Around supplemental)."
     )
     for warning in errors:
         print(f"WARNING: {warning}")

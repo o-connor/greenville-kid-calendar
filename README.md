@@ -10,6 +10,12 @@ The feed covers the next 45 days and refreshes daily through GitHub Actions. It 
 - The Children's Museum of the Upstate in Greenville
 - Toddler and family programs at Upcountry History Museum
 - Storytime on the Steps at M. Judson Booksellers
+- Toddler-friendly Greenville Zoo special events
+- Selected South Carolina Children's Theatre performances for ages 3+
+- TD Saturday Market and selected Main Street family events
+- Hughes Main special programs not already present in the library series feeds
+
+Kidding Around Greenville is used only as a supplemental source. Events must match an approved downtown-area venue and toddler-friendly title or category; distant venues, general arena events, and duplicates from official calendars are excluded.
 
 Events whose official minimum age is above one are labeled `[18m+]`, `[2+]`, or `[3+]`.
 
