@@ -2,6 +2,8 @@
 
 A rolling public iCalendar feed for downtown Greenville activities suitable for active children ages 0–3.
 
+The GitHub Pages site also displays the next two weeks in a responsive calendar view generated from the same feed.
+
 The feed covers the next 45 days and refreshes daily through GitHub Actions. It currently includes:
 
 - Greenville County Library programs at Hughes Main Library

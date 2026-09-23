@@ -339,8 +339,50 @@ def render_calendar(events: list[Event], generated_at: datetime) -> str:
     return "\r\n".join(folded) + "\r\n"
 
 
-def render_index(event_count: int, generated_at: datetime, errors: list[str]) -> str:
+def display_time(value: datetime) -> str:
+    local = value.astimezone(TZ)
+    return local.strftime("%-I:%M %p").replace(":00 ", " ")
+
+
+def render_two_week_calendar(events: list[Event], start_day: date) -> str:
+    end_day = start_day + timedelta(days=13)
+    grouped: dict[date, list[Event]] = {
+        start_day + timedelta(days=offset): [] for offset in range(14)
+    }
+    for event in events:
+        event_day = event.start.astimezone(TZ).date()
+        if start_day <= event_day <= end_day:
+            grouped[event_day].append(event)
+
+    cards: list[str] = []
+    for day, day_events in grouped.items():
+        today_class = " today" if day == start_day else ""
+        event_markup: list[str] = []
+        for event in day_events:
+            title = html.escape(event.title)
+            url = html.escape(event.url, quote=True)
+            source = html.escape(event.source)
+            start_label = display_time(event.start)
+            end_label = display_time(event.end)
+            time_label = start_label if start_label == end_label else f"{start_label}–{end_label}"
+            event_markup.append(
+                f'<a class="event" href="{url}"><span class="event-time">{time_label}</span>'
+                f'<span class="event-title">{title}</span><span class="event-source">{source}</span></a>'
+            )
+        if not event_markup:
+            event_markup.append('<p class="empty">No events listed</p>')
+        cards.append(
+            f'<section class="day{today_class}" aria-label="{day.strftime("%A, %B %-d")}">'
+            f'<header><span>{day.strftime("%a")}</span><strong>{day.strftime("%-d")}</strong></header>'
+            f'<div class="day-events">{"".join(event_markup)}</div></section>'
+        )
+    return "".join(cards)
+
+
+def render_index(events: list[Event], generated_at: datetime, errors: list[str]) -> str:
     updated = generated_at.astimezone(TZ).strftime("%B %-d, %Y at %-I:%M %p %Z")
+    event_count = len(events)
+    calendar_markup = render_two_week_calendar(events, generated_at.astimezone(TZ).date())
     warning = ""
     if errors:
         warning = (
@@ -353,28 +395,92 @@ def render_index(event_count: int, generated_at: datetime, errors: list[str]) ->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Downtown Greenville Kid Activities</title>
+  <meta name="description" content="A rolling two-week calendar of downtown Greenville activities for children ages 0–3.">
   <style>
-    body {{ max-width: 680px; margin: 4rem auto; padding: 0 1.25rem; font: 17px/1.55 system-ui, sans-serif; color: #233024; }}
-    h1 {{ line-height: 1.15; }}
-    .button {{ display: inline-block; padding: .8rem 1rem; border-radius: .6rem; background: #236b3d; color: white; text-decoration: none; font-weight: 700; }}
-    .meta {{ color: #667066; }}
-    .warning {{ padding: .75rem; background: #fff2cf; border-radius: .4rem; }}
+    :root {{ color-scheme: light; --ink: #253127; --muted: #687269; --paper: #fbfaf5; --card: #fff; --line: #dce2d7; --green: #236b3d; --green-soft: #e8f3e8; --gold: #f0b544; }}
+    * {{ box-sizing: border-box; }}
+    body {{ margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.45 ui-rounded, "SF Pro Rounded", system-ui, sans-serif; }}
+    main {{ width: min(1180px, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 4rem; }}
+    .top {{ display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }}
+    .eyebrow {{ margin: 0 0 .4rem; color: var(--green); font-size: .78rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }}
+    h1 {{ max-width: 720px; margin: 0; font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1.03; letter-spacing: -.04em; }}
+    .intro {{ max-width: 650px; margin: .8rem 0 0; color: var(--muted); font-size: 1.05rem; }}
+    .actions {{ flex: 0 0 auto; text-align: right; }}
+    .button {{ display: inline-block; padding: .8rem 1rem; border-radius: 999px; background: var(--green); color: white; text-decoration: none; font-weight: 750; box-shadow: 0 4px 14px rgb(35 107 61 / 18%); }}
+    .button:hover {{ background: #174f2d; }}
+    .meta {{ margin: .65rem 0 0; color: var(--muted); font-size: .85rem; }}
+    .calendar-heading {{ display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .75rem; }}
+    h2 {{ margin: 0; font-size: 1.3rem; }}
+    .calendar-grid {{ display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .65rem; align-items: stretch; }}
+    .day {{ min-width: 0; min-height: 190px; overflow: hidden; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }}
+    .day > header {{ display: flex; align-items: center; justify-content: space-between; padding: .6rem .7rem; border-bottom: 1px solid var(--line); background: #f6f7f2; color: var(--muted); }}
+    .day > header span {{ font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }}
+    .day > header strong {{ color: var(--ink); font-size: 1rem; }}
+    .day.today {{ border-color: var(--green); box-shadow: 0 0 0 1px var(--green); }}
+    .day.today > header {{ background: var(--green-soft); color: var(--green); }}
+    .day-events {{ display: grid; gap: .45rem; padding: .5rem; }}
+    .event {{ display: grid; gap: .12rem; padding: .55rem; border-left: 3px solid var(--gold); border-radius: .35rem; background: #fff9ea; color: inherit; text-decoration: none; }}
+    .event:hover {{ background: #fff2c9; }}
+    .event-time {{ color: #765715; font-size: .7rem; font-weight: 800; text-transform: uppercase; }}
+    .event-title {{ font-size: .82rem; font-weight: 750; line-height: 1.2; overflow-wrap: anywhere; }}
+    .event-source {{ color: var(--muted); font-size: .67rem; line-height: 1.15; }}
+    .empty {{ margin: .45rem; color: #9aa19a; font-size: .75rem; font-style: italic; }}
+    .details {{ display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }}
+    .details h2 {{ margin-bottom: .5rem; }}
+    .details p, .details li {{ color: var(--muted); }}
+    .details a {{ color: var(--green); }}
+    .warning {{ padding: .75rem; border-radius: .4rem; background: #fff2cf; }}
+    @media (max-width: 900px) {{
+      .top {{ align-items: start; flex-direction: column; gap: 1.25rem; }}
+      .actions {{ text-align: left; }}
+      .calendar-grid {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
+      .day {{ min-height: 0; }}
+    }}
+    @media (max-width: 560px) {{
+      main {{ width: min(100% - 1.25rem, 1180px); padding-top: 1.5rem; }}
+      .calendar-grid {{ grid-template-columns: 1fr; }}
+      .day > header {{ justify-content: flex-start; gap: .45rem; }}
+      .day > header strong {{ order: -1; }}
+      .event-title {{ font-size: .9rem; }}
+      .details {{ grid-template-columns: 1fr; gap: 1rem; }}
+    }}
   </style>
 </head>
 <body>
-  <h1>Downtown Greenville Kid Activities</h1>
-  <p>A rolling 45-day calendar for active children ages 0–3, focused on downtown Greenville, Heritage Green, and nearby family venues.</p>
-  <p><a class="button" href="calendar.ics">Subscribe or download calendar</a></p>
-  <p class="meta">{event_count} upcoming events · Updated {updated}</p>
-  {warning}
-  <h2>Included sources</h2>
-  <ul>
-    <li>Greenville County Library — Hughes Main Library</li>
-    <li>The Children's Museum of the Upstate — Greenville</li>
-  </ul>
-  <p>Events marked <strong>[18m+]</strong> or <strong>[2+]</strong> are stretch options based on the organizer's stated age range.</p>
-  <h2>Greenville Zoo</h2>
-  <p>The zoo does not currently provide a stable feed that can be safely merged automatically. Use its <a href="https://www.greenvillezoo.com/Calendar.aspx">official calendar</a> for zoo updates.</p>
+  <main>
+    <section class="top">
+      <div>
+        <p class="eyebrow">Greenville, South Carolina</p>
+        <h1>Little-kid adventures, all in one place.</h1>
+        <p class="intro">A rolling calendar for active children ages 0–3, focused on downtown Greenville and Heritage Green.</p>
+      </div>
+      <div class="actions">
+        <a class="button" href="calendar.ics">Subscribe in Apple Calendar</a>
+        <p class="meta">{event_count} events in the full 45-day feed<br>Updated {updated}</p>
+      </div>
+    </section>
+    <section aria-labelledby="next-two-weeks">
+      <div class="calendar-heading">
+        <h2 id="next-two-weeks">The next two weeks</h2>
+      </div>
+      <div class="calendar-grid">{calendar_markup}</div>
+    </section>
+    {warning}
+    <section class="details">
+      <div>
+        <h2>What’s included</h2>
+        <ul>
+          <li>Greenville County Library — Hughes Main Library</li>
+          <li>The Children's Museum of the Upstate — Greenville</li>
+        </ul>
+        <p>Events marked <strong>[18m+]</strong> or <strong>[2+]</strong> are stretch options based on the organizer's stated age range.</p>
+      </div>
+      <div>
+        <h2>Greenville Zoo</h2>
+        <p>The zoo does not currently provide a stable feed that can be safely merged automatically. Check its <a href="https://www.greenvillezoo.com/Calendar.aspx">official calendar</a> for zoo updates.</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
 """
@@ -395,7 +501,7 @@ def main() -> None:
     DOCS.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(render_calendar(events, generated_at), encoding="utf-8")
     (DOCS / "index.html").write_text(
-        render_index(len(events), generated_at, errors), encoding="utf-8"
+        render_index(events, generated_at, errors), encoding="utf-8"
     )
     STATUS.write_text(
         json.dumps(
