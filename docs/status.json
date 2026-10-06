@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-05T15:17:02.110669-04:00",
-  "window_start": "2026-10-05",
-  "window_end": "2026-11-19",
-  "event_count": 125,
+  "generated_at": "2026-10-06T12:47:45.592775-04:00",
+  "window_start": "2026-10-06",
+  "window_end": "2026-11-20",
+  "event_count": 127,
   "source_counts": {
     "library": 11,
-    "tcmu": 67,
+    "tcmu": 69,
     "upcountry_history_museum": 0,
     "kidding_around_supplemental": 47,
     "m_judson": 13,
