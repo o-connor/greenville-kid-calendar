@@ -26,61 +26,8 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:11c271958c8324660d9e854e@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
-DTSTART;TZID=America/New_York:20261006T100000
-DTEND;TZID=America/New_York:20261006T110000
-SUMMARY:[2+] TCMU Tots
-LOCATION:TCMU Greenville\, 300 College St\, Greenville\, SC\, 29601
-DESCRIPTION:Designed to spark curiosity and creativity for little explorers
- ! Little ones ages 2–5 will enjoy sensory play and develop fine motor an
- d social skills. Located in Get Up & Grow on the third floor. Source: The 
- Children's Museum of the Upstate. Check the linked organizer page before l
- eaving.
-URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-06/
-END:VEVENT
-BEGIN:VEVENT
-UID:7e7320db29f1fdf008927887@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
-DTSTART;TZID=America/New_York:20261006T103000
-DTEND;TZID=America/New_York:20261006T110000
-SUMMARY:Music with Mr. Fox
-LOCATION:TCMU Greenville\, 300 College St\, Greenville\, SC\, 29601
-DESCRIPTION:Families can enjoy an interactive music experience with songs\,
-  storytelling\, and audience participation hosted by Dan Fox. This is incl
- uded with museum admission. Source: The Children's Museum of the Upstate. 
- Check the linked organizer page before leaving.
-URL:https://tcmupstate.org/event/music-with-mr-fox-2/2026-10-06/1/
-END:VEVENT
-BEGIN:VEVENT
-UID:2dd397352eeb21b9f00c60e6@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
-DTSTART;TZID=America/New_York:20261006T113000
-DTEND;TZID=America/New_York:20261006T120000
-SUMMARY:Music with Mr. Fox
-LOCATION:TCMU Greenville\, 300 College St\, Greenville\, SC\, 29601
-DESCRIPTION:Families can enjoy an interactive music experience with songs\,
-  storytelling\, and audience participation hosted by Dan Fox. This is incl
- uded with museum admission. Source: The Children's Museum of the Upstate. 
- Check the linked organizer page before leaving.
-URL:https://tcmupstate.org/event/music-with-mr-fox-2/2026-10-06/2/
-END:VEVENT
-BEGIN:VEVENT
-UID:be39ee35eea47fa289efe014@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
-DTSTART;TZID=America/New_York:20261006T180000
-DTEND;TZID=America/New_York:20261006T200000
-SUMMARY:TCMU On The Go: National Night Out with Simpsonville Police Departm
- ent
-LOCATION:TCMU Greenville\, 300 College St\, Greenville\, SC\, 29601
-DESCRIPTION:Source: The Children's Museum of the Upstate. Check the linked 
- organizer page before leaving.
-URL:https://tcmupstate.org/event/tcmu-on-the-go-national-night-out-with-sim
- psonville-police-department/
-END:VEVENT
-BEGIN:VEVENT
 UID:4fb841d02d98df0ef026fe7e@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261007T100000
 DTEND;TZID=America/New_York:20261007T110000
 SUMMARY:[2+] TCMU Tots
@@ -93,28 +40,8 @@ DESCRIPTION:Designed to spark curiosity and creativity for little explorers
 URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-07/
 END:VEVENT
 BEGIN:VEVENT
-UID:00c281b1a515e533f5159b26@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
-DTSTART;TZID=America/New_York:20261007T103000
-DTEND;TZID=America/New_York:20261007T104500
-SUMMARY:Storytime on the Steps
-LOCATION:M. Judson Booksellers\, 130 South Main Street\, Greenville\, SC\, 
- United States
-DESCRIPTION:Bring your littles to the front steps of M. Judson for our twic
- e-weekly story time! Enjoy some wonderful picture books read aloud to the 
- crowd by our very own booksellers\, and children will even get a sweet tre
- at to go. If you catch them on a rainy day or cold day\, storytime is held
-  inside in the children's section toward the back of the store. Keep up wi
- th changes to the schedule here> Book Store & Coffee Shop in Downtown Gree
- nville Check out our Review of Storytime on the Steps at M. Judson Booksel
- lers! Source: M. Judson Booksellers. Check the linked organizer page befor
- e leaving.
-URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
- 10-07
-END:VEVENT
-BEGIN:VEVENT
 UID:e36a234ec0c46523e7e9c1be@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART:20261007T143000Z
 DTEND:20261007T151500Z
 SUMMARY:[2+] Preschool Picassos
@@ -127,7 +54,7 @@ URL:https://www.greenvillelibrary.org/event-series/preschool-picassos
 END:VEVENT
 BEGIN:VEVENT
 UID:99cfdecced810a8fda9f1e1a@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261007T113000
 DTEND;TZID=America/New_York:20261007T120000
 SUMMARY:Story Time & More
@@ -141,7 +68,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-10-07/
 END:VEVENT
 BEGIN:VEVENT
 UID:2c3bcd632aa547d11cf8e4d1@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261007T113000
 DTEND;TZID=America/New_York:20261007T120000
 SUMMARY:Story Time & More with Help Me Grow SC
@@ -155,7 +82,7 @@ URL:https://tcmupstate.org/event/story-time-more-180/2026-10-07/
 END:VEVENT
 BEGIN:VEVENT
 UID:b29a45bbd6555fc98386ed2b@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART:20261008T140000Z
 DTEND:20261008T143000Z
 SUMMARY:[18m+] Toddler Tales
@@ -168,7 +95,7 @@ URL:https://www.greenvillelibrary.org/event-series/toddler-tales
 END:VEVENT
 BEGIN:VEVENT
 UID:482e8071c7000fe8c924771c@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261008T100000
 DTEND;TZID=America/New_York:20261008T110000
 SUMMARY:[2+] TCMU Tots
@@ -182,7 +109,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-08/
 END:VEVENT
 BEGIN:VEVENT
 UID:4a04a2075db268d483f9d16b@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART:20261008T150000Z
 DTEND:20261008T153000Z
 SUMMARY:Bouncing Babies
@@ -195,7 +122,7 @@ URL:https://www.greenvillelibrary.org/event-series/bouncing-babies
 END:VEVENT
 BEGIN:VEVENT
 UID:8b27b1c91474e8ee7054f7d3@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261008T113000
 DTEND;TZID=America/New_York:20261008T120000
 SUMMARY:Story Time & More
@@ -209,7 +136,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-10-08/
 END:VEVENT
 BEGIN:VEVENT
 UID:3b5eba1db907785d88fbeef5@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261009T100000
 DTEND;TZID=America/New_York:20261009T110000
 SUMMARY:[2+] TCMU Tots
@@ -223,7 +150,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-09/
 END:VEVENT
 BEGIN:VEVENT
 UID:2d10b42a11d199d7b599d364@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261009T113000
 DTEND;TZID=America/New_York:20261009T120000
 SUMMARY:Story Time & More
@@ -237,7 +164,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-10-09/
 END:VEVENT
 BEGIN:VEVENT
 UID:ed0d8a64a2f5a6bf4444ccbc@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261010T080000
 DTEND;TZID=America/New_York:20261010T120000
 SUMMARY:TD Saturday Market- Downtown Greenville
@@ -267,7 +194,7 @@ URL:https://kiddingaroundgreenville.com/events/td-saturday-market-downtown-
 END:VEVENT
 BEGIN:VEVENT
 UID:be275ada8de8d1b26b914ab7@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261010T100000
 DTEND;TZID=America/New_York:20261010T110000
 SUMMARY:[2+] TCMU Tots
@@ -281,7 +208,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-10/
 END:VEVENT
 BEGIN:VEVENT
 UID:b5b52089b9e65f5c18bc5ec3@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261010T103000
 DTEND;TZID=America/New_York:20261010T104500
 SUMMARY:Storytime on the Steps
@@ -301,7 +228,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:58e2e41aa76da1c51e771f3d@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261010T113000
 DTEND;TZID=America/New_York:20261010T120000
 SUMMARY:[3+] Lollipops Concert: Olivia and the Missing Toy and GSO Percussi
@@ -319,7 +246,7 @@ URL:https://kiddingaroundgreenville.com/events/lollipops-concert-olivia-and
 END:VEVENT
 BEGIN:VEVENT
 UID:4c475d356c9c9a8c9179c885@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261011T090000
 DTEND;TZID=America/New_York:20261011T110000
 SUMMARY:Member Morning
@@ -331,7 +258,7 @@ URL:https://tcmupstate.org/event/member-morning-2-2/2026-10-11/
 END:VEVENT
 BEGIN:VEVENT
 UID:70e1437eff85891d61161932@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART:20261012T140000Z
 DTEND:20261012T143000Z
 SUMMARY:[18m+] Musical Jamboree
@@ -344,7 +271,7 @@ URL:https://www.greenvillelibrary.org/event-series/musical-jamboree
 END:VEVENT
 BEGIN:VEVENT
 UID:9c2b0843e71be5588e626470@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261013T100000
 DTEND;TZID=America/New_York:20261013T110000
 SUMMARY:[2+] TCMU Tots
@@ -358,7 +285,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-13/
 END:VEVENT
 BEGIN:VEVENT
 UID:77eeffe119b3df06dd1e18f5@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261013T113000
 DTEND;TZID=America/New_York:20261013T120000
 SUMMARY:Story Time & More
@@ -372,7 +299,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-10-13/
 END:VEVENT
 BEGIN:VEVENT
 UID:5ea6120252ecb21db078ab1d@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261014T100000
 DTEND;TZID=America/New_York:20261014T110000
 SUMMARY:[2+] TCMU Tots
@@ -386,7 +313,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-14/
 END:VEVENT
 BEGIN:VEVENT
 UID:a55b8cd90dd656fdeb6a3c1b@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261014T103000
 DTEND;TZID=America/New_York:20261014T104500
 SUMMARY:Storytime on the Steps
@@ -406,7 +333,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:8e7a869523590dd49b71c21d@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART:20261014T143000Z
 DTEND:20261014T151500Z
 SUMMARY:[2+] Science Station\\\, Jr.
@@ -419,7 +346,7 @@ URL:https://www.greenvillelibrary.org/event-series/science-station-jr
 END:VEVENT
 BEGIN:VEVENT
 UID:958405df86dd5855e909051e@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261014T113000
 DTEND;TZID=America/New_York:20261014T120000
 SUMMARY:Story Time & More
@@ -433,7 +360,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-10-14/
 END:VEVENT
 BEGIN:VEVENT
 UID:69d9f202215deb6b6b8d3551@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261014T150000
 DTEND;TZID=America/New_York:20261014T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -453,7 +380,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:e5e5f4a469a9fddb847bd94f@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART:20261015T140000Z
 DTEND:20261015T143000Z
 SUMMARY:[18m+] Toddler Tales
@@ -466,7 +393,7 @@ URL:https://www.greenvillelibrary.org/event-series/toddler-tales
 END:VEVENT
 BEGIN:VEVENT
 UID:0fdde1d51041cb2aee1df2c0@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261015T100000
 DTEND;TZID=America/New_York:20261015T110000
 SUMMARY:[2+] TCMU Tots
@@ -479,8 +406,21 @@ DESCRIPTION:Designed to spark curiosity and creativity for little explorers
 URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-15/
 END:VEVENT
 BEGIN:VEVENT
+UID:a0f8cbba2162dac73ff83f10@greenville-kid-calendar
+DTSTAMP:20261007T172501Z
+DTSTART:20261015T150000Z
+DTEND:20261015T153000Z
+SUMMARY:Bouncing Babies
+LOCATION:Hughes Main Library\, 25 Heritage Green Place\, Greenville\, SC 29
+ 601
+DESCRIPTION:Stories\, rhymes\, music\, and bouncing games for ages 1 mo–1
+ 8 mos. Includes hands-on play time and book sharing. Source: Greenville Co
+ unty Library. Check the linked organizer page before leaving.
+URL:https://www.greenvillelibrary.org/event-series/bouncing-babies
+END:VEVENT
+BEGIN:VEVENT
 UID:ee3fbc863712ae37b9b2add6@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261015T113000
 DTEND;TZID=America/New_York:20261015T120000
 SUMMARY:Story Time & More
@@ -494,7 +434,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-10-15/
 END:VEVENT
 BEGIN:VEVENT
 UID:8581228b17e3fe0950a11229@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261015T150000
 DTEND;TZID=America/New_York:20261015T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -514,7 +454,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:c15bb54b2a472ff1d03a5df3@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261016T150000
 DTEND;TZID=America/New_York:20261016T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -534,7 +474,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:048d5f15d05b3580203aba76@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261016T170000
 DTEND;TZID=America/New_York:20261016T190000
 SUMMARY:TCMU On The Go: Easley Community Safety Celebration
@@ -546,7 +486,7 @@ URL:https://tcmupstate.org/event/tcmu-on-the-go-easley-community-safety-cel
 END:VEVENT
 BEGIN:VEVENT
 UID:fae119f3698addb4a8e63356@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261017T080000
 DTEND;TZID=America/New_York:20261017T120000
 SUMMARY:TD Saturday Market- Downtown Greenville
@@ -576,7 +516,7 @@ URL:https://kiddingaroundgreenville.com/events/td-saturday-market-downtown-
 END:VEVENT
 BEGIN:VEVENT
 UID:f4f5529b1d90000e98afcc62@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261017T100000
 DTEND;TZID=America/New_York:20261017T110000
 SUMMARY:[2+] TCMU Tots
@@ -590,7 +530,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-17/
 END:VEVENT
 BEGIN:VEVENT
 UID:61f36ecfab34fba3818283bc@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261017T103000
 DTEND;TZID=America/New_York:20261017T104500
 SUMMARY:Storytime on the Steps
@@ -610,7 +550,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:be7bb08c5c75d50c0e2b9073@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261017T113000
 DTEND;TZID=America/New_York:20261017T120000
 SUMMARY:Story Time & More
@@ -624,7 +564,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-10-17/
 END:VEVENT
 BEGIN:VEVENT
 UID:a5b1d72a353cc20b2dbf03df@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261017T150000
 DTEND;TZID=America/New_York:20261017T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -644,7 +584,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:b31b243382842f95bef1ed12@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261018T150000
 DTEND;TZID=America/New_York:20261018T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -664,7 +604,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:fffc73adb9a43910dbdf71b0@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART:20261019T140000Z
 DTEND:20261019T143000Z
 SUMMARY:[18m+] Musical Jamboree
@@ -677,7 +617,7 @@ URL:https://www.greenvillelibrary.org/event-series/musical-jamboree
 END:VEVENT
 BEGIN:VEVENT
 UID:ecd4be3effbc0f58c59cad5b@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261020T100000
 DTEND;TZID=America/New_York:20261020T110000
 SUMMARY:[2+] TCMU Tots
@@ -691,7 +631,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-20/
 END:VEVENT
 BEGIN:VEVENT
 UID:8b95f05fbbd3d4fcb3be5bb5@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART:20261020T143000Z
 DTEND:20261020T151500Z
 SUMMARY:Stay and Play!
@@ -704,7 +644,7 @@ URL:https://www.greenvillelibrary.org/event-series/stay-and-play
 END:VEVENT
 BEGIN:VEVENT
 UID:ac5af0cda7bcf5a2b6b16913@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261020T113000
 DTEND;TZID=America/New_York:20261020T120000
 SUMMARY:Story Time & More
@@ -718,7 +658,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-10-20/
 END:VEVENT
 BEGIN:VEVENT
 UID:18836efbce827cccd0117c93@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261021T100000
 DTEND;TZID=America/New_York:20261021T110000
 SUMMARY:[2+] TCMU Tots
@@ -732,7 +672,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-21/
 END:VEVENT
 BEGIN:VEVENT
 UID:b1aac5ed960998cf096b2010@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261021T103000
 DTEND;TZID=America/New_York:20261021T104500
 SUMMARY:Storytime on the Steps
@@ -752,7 +692,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:fc2650b2b2ede5bffaff95d2@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261021T113000
 DTEND;TZID=America/New_York:20261021T120000
 SUMMARY:Story Time & More
@@ -766,7 +706,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-10-21/
 END:VEVENT
 BEGIN:VEVENT
 UID:e4331821040788408eea2602@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261021T150000
 DTEND;TZID=America/New_York:20261021T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -786,7 +726,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:9cab5e2b92ec000274422f0f@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART:20261022T140000Z
 DTEND:20261022T143000Z
 SUMMARY:[18m+] Toddler Tales
@@ -799,7 +739,7 @@ URL:https://www.greenvillelibrary.org/event-series/toddler-tales
 END:VEVENT
 BEGIN:VEVENT
 UID:425bfdd3ec53cd66fdee9e90@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261022T100000
 DTEND;TZID=America/New_York:20261022T110000
 SUMMARY:[2+] TCMU Tots
@@ -813,7 +753,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-22/
 END:VEVENT
 BEGIN:VEVENT
 UID:6b2ae7f6065418db1c2ed450@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261022T103000
 DTEND;TZID=America/New_York:20261022T110000
 SUMMARY:Music with Mr. Fox
@@ -826,7 +766,7 @@ URL:https://tcmupstate.org/event/music-with-mr-fox-2/2026-10-22/1/
 END:VEVENT
 BEGIN:VEVENT
 UID:d48b63a00e19c1e01a8265a3@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261022T113000
 DTEND;TZID=America/New_York:20261022T120000
 SUMMARY:Music with Mr. Fox
@@ -839,7 +779,7 @@ URL:https://tcmupstate.org/event/music-with-mr-fox-2/2026-10-22/2/
 END:VEVENT
 BEGIN:VEVENT
 UID:d8e3d9c560dbc5f7c3ac7787@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261022T150000
 DTEND;TZID=America/New_York:20261022T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -859,7 +799,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:1017831ebbff3c38bc27ca4c@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261023T100000
 DTEND;TZID=America/New_York:20261023T110000
 SUMMARY:[2+] TCMU Tots
@@ -873,7 +813,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-23/
 END:VEVENT
 BEGIN:VEVENT
 UID:e8ccc215d50ddd5651e439f8@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261023T113000
 DTEND;TZID=America/New_York:20261023T120000
 SUMMARY:Story Time & More
@@ -887,7 +827,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-10-23/
 END:VEVENT
 BEGIN:VEVENT
 UID:1ee9b441684ac952bd7478b6@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261023T150000
 DTEND;TZID=America/New_York:20261023T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -907,7 +847,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:b8d4152282ce6f1980c03713@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261024T080000
 DTEND;TZID=America/New_York:20261024T120000
 SUMMARY:TD Saturday Market- Downtown Greenville
@@ -937,7 +877,7 @@ URL:https://kiddingaroundgreenville.com/events/td-saturday-market-downtown-
 END:VEVENT
 BEGIN:VEVENT
 UID:b64ba237b06715d75c13c5d8@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261024T103000
 DTEND;TZID=America/New_York:20261024T104500
 SUMMARY:Storytime on the Steps
@@ -957,7 +897,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:869e38eb9434feba6b15bd0b@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261024T103000
 DTEND;TZID=America/New_York:20261024T113000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -991,7 +931,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct
 END:VEVENT
 BEGIN:VEVENT
 UID:e94c7f3e9e53c8bdfbe8aa91@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261024T140000
 DTEND;TZID=America/New_York:20261024T150000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -1025,7 +965,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-2
 END:VEVENT
 BEGIN:VEVENT
 UID:90c11658eb7cd74a86cdcc14@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261024T150000
 DTEND;TZID=America/New_York:20261024T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -1045,7 +985,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:2ffcce6c310a9708466bcecc@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261025T140000
 DTEND;TZID=America/New_York:20261025T150000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -1079,7 +1019,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-3
 END:VEVENT
 BEGIN:VEVENT
 UID:3456e3ff3588d14c4c6363c2@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261025T150000
 DTEND;TZID=America/New_York:20261025T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -1099,7 +1039,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:4827fe2164cd4727cea96f30@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261025T150000
 DTEND;TZID=America/New_York:20261025T170000
 SUMMARY:TCMU On The Go: Fall for KINDness with Kind of the Upstate
@@ -1111,7 +1051,7 @@ URL:https://tcmupstate.org/event/tcmu-on-the-go-fall-for-kindness-with-kind
 END:VEVENT
 BEGIN:VEVENT
 UID:60bb1f71f01ea5b79e5627f6@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261025T163000
 DTEND;TZID=America/New_York:20261025T173000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -1145,7 +1085,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-4
 END:VEVENT
 BEGIN:VEVENT
 UID:0bae1f65ce7b4ec3363d6739@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261026T100000
 DTEND;TZID=America/New_York:20261026T103000
 SUMMARY:[18m+] Musical Jamboree: Monster Mash @ Hughes Main
@@ -1161,7 +1101,7 @@ URL:https://kiddingaroundgreenville.com/events/musical-jamboree-monster-mas
 END:VEVENT
 BEGIN:VEVENT
 UID:3f801720b5d97a2d43e42bc2@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261026T150000
 DTEND;TZID=America/New_York:20261026T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -1181,7 +1121,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:9e7f12e66d4011a1464b3637@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261027T100000
 DTEND;TZID=America/New_York:20261027T110000
 SUMMARY:Therapy Dogs at TCMU
@@ -1195,7 +1135,7 @@ URL:https://tcmupstate.org/event/therapy-dogs-at-tcmu-7/2026-10-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:87197e5d22d5f556b46dd545@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261027T100000
 DTEND;TZID=America/New_York:20261027T110000
 SUMMARY:[2+] TCMU Tots
@@ -1209,7 +1149,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:c4e4eff0ba59e741359485b5@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261027T113000
 DTEND;TZID=America/New_York:20261027T120000
 SUMMARY:Story Time & More
@@ -1223,7 +1163,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-10-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:6bcd51da3da06ab7d303f4a1@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261027T150000
 DTEND;TZID=America/New_York:20261027T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -1243,7 +1183,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:0b42f9df479e2f6fe17c0c04@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261028T103000
 DTEND;TZID=America/New_York:20261028T104500
 SUMMARY:Storytime on the Steps
@@ -1263,7 +1203,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:05fd4104cc27c7e5a16e5c8e@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261028T150000
 DTEND;TZID=America/New_York:20261028T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -1283,7 +1223,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:1beb375a1027c0679396dddc@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261029T100000
 DTEND;TZID=America/New_York:20261029T103000
 SUMMARY:[18m+] Not-So-Spooky Toddler Tales- Hughes Main Library
@@ -1299,7 +1239,7 @@ URL:https://kiddingaroundgreenville.com/events/not-so-spooky-toddler-tales-
 END:VEVENT
 BEGIN:VEVENT
 UID:a8eba9fcb884b22acfc03d2a@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261029T100000
 DTEND;TZID=America/New_York:20261029T110000
 SUMMARY:[2+] TCMU Tots
@@ -1313,7 +1253,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-29/
 END:VEVENT
 BEGIN:VEVENT
 UID:fc65cad4c914aaf3a8775b4e@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261029T113000
 DTEND;TZID=America/New_York:20261029T120000
 SUMMARY:Story Time & More
@@ -1327,7 +1267,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-10-29/
 END:VEVENT
 BEGIN:VEVENT
 UID:9b66c8d49cd75fdb5b143144@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261029T150000
 DTEND;TZID=America/New_York:20261029T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -1347,7 +1287,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:552cb3f93eb2b5b9ae175822@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261030T100000
 DTEND;TZID=America/New_York:20261030T110000
 SUMMARY:[2+] TCMU Tots
@@ -1361,7 +1301,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-10-30/
 END:VEVENT
 BEGIN:VEVENT
 UID:7700aba6a3e14dfde7768bf5@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261030T113000
 DTEND;TZID=America/New_York:20261030T120000
 SUMMARY:Story Time & More
@@ -1375,7 +1315,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-10-30/
 END:VEVENT
 BEGIN:VEVENT
 UID:f9872597b19ecde096bc6439@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261030T150000
 DTEND;TZID=America/New_York:20261030T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -1395,7 +1335,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:266264b36300121c3ec64856@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261031T080000
 DTEND;TZID=America/New_York:20261031T120000
 SUMMARY:TD Saturday Market- Downtown Greenville
@@ -1425,7 +1365,7 @@ URL:https://kiddingaroundgreenville.com/events/td-saturday-market-downtown-
 END:VEVENT
 BEGIN:VEVENT
 UID:054d2ee6b0494042824bee37@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261031T100000
 DTEND;TZID=America/New_York:20261031T150000
 SUMMARY:Trick or Treat on Main Street
@@ -1442,7 +1382,7 @@ URL:https://kiddingaroundgreenville.com/events/trick-or-treat-on-main-stree
 END:VEVENT
 BEGIN:VEVENT
 UID:a3c0f9338d706091cea29ee3@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261031T103000
 DTEND;TZID=America/New_York:20261031T104500
 SUMMARY:Storytime on the Steps
@@ -1462,7 +1402,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:5d6b35679911093225d5983d@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261031T103000
 DTEND;TZID=America/New_York:20261031T113000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -1496,7 +1436,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-5
 END:VEVENT
 BEGIN:VEVENT
 UID:09abbb1ac29c3045b927a15b@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261031T110000
 DTEND;TZID=America/New_York:20261031T140000
 SUMMARY:TCMU On The Go: Ingles Fane Zone at Furman Football Game
@@ -1508,7 +1448,7 @@ URL:https://tcmupstate.org/event/tcmu-on-the-go-ingles-fane-zone-at-furman-
 END:VEVENT
 BEGIN:VEVENT
 UID:9806efa9e75f9f1f7cc43513@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261031T130000
 DTEND;TZID=America/New_York:20261031T160000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -1528,7 +1468,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:6f7a048545d9fb4b0ddce646@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261031T140000
 DTEND;TZID=America/New_York:20261031T150000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -1562,7 +1502,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-6
 END:VEVENT
 BEGIN:VEVENT
 UID:a771968e875c37f423f8cd0f@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261101T140000
 DTEND;TZID=America/New_York:20261101T150000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -1595,8 +1535,21 @@ DESCRIPTION:A Musical Adventure Based on Jon Klassen's Beloved Picture Book
 URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-7
 END:VEVENT
 BEGIN:VEVENT
+UID:42f683aafe604548b601d228@greenville-kid-calendar
+DTSTAMP:20261007T172501Z
+DTSTART:20261102T150000Z
+DTEND:20261102T153000Z
+SUMMARY:[18m+] Musical Jamboree
+LOCATION:Hughes Main Library\, 25 Heritage Green Place\, Greenville\, SC 29
+ 601
+DESCRIPTION:Explore children's literature through music\, songs\, creative 
+ movement\, and instrument play for ages 18 mos–4 yrs. Source: Greenville
+  County Library. Check the linked organizer page before leaving.
+URL:https://www.greenvillelibrary.org/event-series/musical-jamboree
+END:VEVENT
+BEGIN:VEVENT
 UID:f33c4964233c1fc9a9a8f77f@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261103T100000
 DTEND;TZID=America/New_York:20261103T110000
 SUMMARY:[2+] TCMU Tots
@@ -1610,7 +1563,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-03/
 END:VEVENT
 BEGIN:VEVENT
 UID:f7ccd0d3574027d36213159d@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261103T113000
 DTEND;TZID=America/New_York:20261103T120000
 SUMMARY:Story Time & More
@@ -1624,7 +1577,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-11-03/
 END:VEVENT
 BEGIN:VEVENT
 UID:7286399e61f79a4e855e5472@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261104T100000
 DTEND;TZID=America/New_York:20261104T110000
 SUMMARY:[2+] TCMU Tots
@@ -1638,7 +1591,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-04/
 END:VEVENT
 BEGIN:VEVENT
 UID:5be4c51321afed7f622de712@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261104T103000
 DTEND;TZID=America/New_York:20261104T104500
 SUMMARY:Storytime on the Steps
@@ -1658,7 +1611,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:02b8555ac5fafb37c1129dc4@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART:20261104T153000Z
 DTEND:20261104T161500Z
 SUMMARY:[2+] Preschool Picassos
@@ -1671,7 +1624,7 @@ URL:https://www.greenvillelibrary.org/event-series/preschool-picassos
 END:VEVENT
 BEGIN:VEVENT
 UID:0a35a2008274e2aea9e2c4b7@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261104T113000
 DTEND;TZID=America/New_York:20261104T120000
 SUMMARY:Story Time & More
@@ -1685,7 +1638,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-11-04/
 END:VEVENT
 BEGIN:VEVENT
 UID:3da7986cb6320674f27587e5@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261105T100000
 DTEND;TZID=America/New_York:20261105T110000
 SUMMARY:[2+] TCMU Tots
@@ -1699,7 +1652,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-05/
 END:VEVENT
 BEGIN:VEVENT
 UID:d6e87268c445d505874d9816@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261105T113000
 DTEND;TZID=America/New_York:20261105T120000
 SUMMARY:Story Time & More
@@ -1713,7 +1666,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-11-05/
 END:VEVENT
 BEGIN:VEVENT
 UID:d87f4d0be43ca5be05a99281@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261106T100000
 DTEND;TZID=America/New_York:20261106T110000
 SUMMARY:[2+] TCMU Tots
@@ -1727,7 +1680,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-06/
 END:VEVENT
 BEGIN:VEVENT
 UID:1f4c86d806624f16f3f76747@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261106T113000
 DTEND;TZID=America/New_York:20261106T120000
 SUMMARY:Story Time & More
@@ -1741,7 +1694,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-11-06/
 END:VEVENT
 BEGIN:VEVENT
 UID:3029a3f4d82f8dc3f83506c7@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261107T100000
 DTEND;TZID=America/New_York:20261107T110000
 SUMMARY:[2+] TCMU Tots
@@ -1755,7 +1708,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-07/
 END:VEVENT
 BEGIN:VEVENT
 UID:4af3de5e70241671bfcab0b3@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261107T103000
 DTEND;TZID=America/New_York:20261107T104500
 SUMMARY:Storytime on the Steps
@@ -1775,7 +1728,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:1a2c8abecb0bafcc20a2330d@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261107T103000
 DTEND;TZID=America/New_York:20261107T113000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -1809,7 +1762,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-8
 END:VEVENT
 BEGIN:VEVENT
 UID:aeab9dd2916c772a32d7a055@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261107T113000
 DTEND;TZID=America/New_York:20261107T120000
 SUMMARY:Story Time & More
@@ -1823,7 +1776,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-11-07/
 END:VEVENT
 BEGIN:VEVENT
 UID:7de85e4a518b6b9098e34323@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261107T140000
 DTEND;TZID=America/New_York:20261107T150000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -1857,7 +1810,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-9
 END:VEVENT
 BEGIN:VEVENT
 UID:d3f5d1891ea482ee0b7b1bca@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261108T090000
 DTEND;TZID=America/New_York:20261108T110000
 SUMMARY:Member Morning
@@ -1869,7 +1822,7 @@ URL:https://tcmupstate.org/event/member-morning-2-2/2026-11-08/
 END:VEVENT
 BEGIN:VEVENT
 UID:07b8a0b60af222289d47ab95@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261108T140000
 DTEND;TZID=America/New_York:20261108T150000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -1903,7 +1856,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-10
 END:VEVENT
 BEGIN:VEVENT
 UID:d7155181ae93137f9bdc6b79@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261110T100000
 DTEND;TZID=America/New_York:20261110T110000
 SUMMARY:[2+] TCMU Tots
@@ -1917,7 +1870,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-10/
 END:VEVENT
 BEGIN:VEVENT
 UID:9d40c02c6c8619e6a395b4a0@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261110T113000
 DTEND;TZID=America/New_York:20261110T120000
 SUMMARY:Story Time & More
@@ -1931,7 +1884,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-11-10/
 END:VEVENT
 BEGIN:VEVENT
 UID:52adfc9b8e1f8d9ff7ea0301@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261111T100000
 DTEND;TZID=America/New_York:20261111T110000
 SUMMARY:[2+] TCMU Tots
@@ -1945,7 +1898,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-11/
 END:VEVENT
 BEGIN:VEVENT
 UID:5a0148741cd0b2d74310dba5@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261111T103000
 DTEND;TZID=America/New_York:20261111T104500
 SUMMARY:Storytime on the Steps
@@ -1965,7 +1918,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:7451a320bf4f1f0ef16023c6@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART:20261111T153000Z
 DTEND:20261111T161500Z
 SUMMARY:[2+] Science Station\\\, Jr.
@@ -1978,7 +1931,7 @@ URL:https://www.greenvillelibrary.org/event-series/science-station-jr
 END:VEVENT
 BEGIN:VEVENT
 UID:c096898dbae0048e7161941d@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261111T113000
 DTEND;TZID=America/New_York:20261111T120000
 SUMMARY:Story Time & More
@@ -1992,7 +1945,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-11-11/
 END:VEVENT
 BEGIN:VEVENT
 UID:57ffc34fdfedc47e833a7011@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261112T100000
 DTEND;TZID=America/New_York:20261112T110000
 SUMMARY:[2+] TCMU Tots
@@ -2006,7 +1959,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-12/
 END:VEVENT
 BEGIN:VEVENT
 UID:1fa6e290c892e67102eb9e3a@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261112T113000
 DTEND;TZID=America/New_York:20261112T120000
 SUMMARY:Story Time & More
@@ -2020,7 +1973,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-11-12/
 END:VEVENT
 BEGIN:VEVENT
 UID:e80c7dca55b147934f39dab3@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261113T100000
 DTEND;TZID=America/New_York:20261113T110000
 SUMMARY:[2+] TCMU Tots
@@ -2034,7 +1987,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-13/
 END:VEVENT
 BEGIN:VEVENT
 UID:8c30b599adb36b6f11a8bf86@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261113T113000
 DTEND;TZID=America/New_York:20261113T120000
 SUMMARY:Story Time & More
@@ -2048,7 +2001,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-11-13/
 END:VEVENT
 BEGIN:VEVENT
 UID:94c6219f68894da3ab28700f@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261114T100000
 DTEND;TZID=America/New_York:20261114T110000
 SUMMARY:[2+] TCMU Tots
@@ -2062,7 +2015,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-14/
 END:VEVENT
 BEGIN:VEVENT
 UID:5e15d2b1f1182aaaaac4358b@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261114T103000
 DTEND;TZID=America/New_York:20261114T104500
 SUMMARY:Storytime on the Steps
@@ -2082,7 +2035,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:9aa921e3e25abcb7468cd808@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261114T113000
 DTEND;TZID=America/New_York:20261114T120000
 SUMMARY:Story Time & More
@@ -2096,7 +2049,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-11-14/
 END:VEVENT
 BEGIN:VEVENT
 UID:7d9c2b23991412438bf4a9eb@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261117T100000
 DTEND;TZID=America/New_York:20261117T110000
 SUMMARY:[2+] TCMU Tots
@@ -2110,7 +2063,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-17/
 END:VEVENT
 BEGIN:VEVENT
 UID:e9dac5a401ae8dc7232fbfc0@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261117T113000
 DTEND;TZID=America/New_York:20261117T120000
 SUMMARY:Story Time & More
@@ -2124,7 +2077,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-11-17/
 END:VEVENT
 BEGIN:VEVENT
 UID:7d6ecfa723ab6c723aa3514b@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261118T100000
 DTEND;TZID=America/New_York:20261118T110000
 SUMMARY:[2+] TCMU Tots
@@ -2138,7 +2091,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-18/
 END:VEVENT
 BEGIN:VEVENT
 UID:e87b0f54c07bbbd0c4934ce5@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261118T103000
 DTEND;TZID=America/New_York:20261118T104500
 SUMMARY:Storytime on the Steps
@@ -2158,7 +2111,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:55a14918bf61cb71ef8ed167@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261118T113000
 DTEND;TZID=America/New_York:20261118T120000
 SUMMARY:Story Time & More
@@ -2172,7 +2125,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-11-18/
 END:VEVENT
 BEGIN:VEVENT
 UID:7c044ff7e4b5350e52326764@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261119T100000
 DTEND;TZID=America/New_York:20261119T110000
 SUMMARY:[2+] TCMU Tots
@@ -2186,7 +2139,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-19/
 END:VEVENT
 BEGIN:VEVENT
 UID:a0104cbc427e7c1bf5203331@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261119T113000
 DTEND;TZID=America/New_York:20261119T120000
 SUMMARY:Story Time & More
@@ -2200,7 +2153,7 @@ URL:https://tcmupstate.org/event/story-time-more-174/2026-11-19/
 END:VEVENT
 BEGIN:VEVENT
 UID:f267de7cc9315e097ad30372@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261120T100000
 DTEND;TZID=America/New_York:20261120T110000
 SUMMARY:[2+] TCMU Tots
@@ -2214,7 +2167,7 @@ URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-20/
 END:VEVENT
 BEGIN:VEVENT
 UID:3861b337daf2567ff216dc78@greenville-kid-calendar
-DTSTAMP:20261006T164745Z
+DTSTAMP:20261007T172501Z
 DTSTART;TZID=America/New_York:20261120T113000
 DTEND;TZID=America/New_York:20261120T120000
 SUMMARY:Story Time & More
@@ -2225,5 +2178,53 @@ DESCRIPTION:Listen\, respond and imagine during Story Time & More in TCMU
  scovery and learning. Source: The Children's Museum of the Upstate. Check 
  the linked organizer page before leaving.
 URL:https://tcmupstate.org/event/story-time-more-174/2026-11-20/
+END:VEVENT
+BEGIN:VEVENT
+UID:d200d68793e1ad8d82a98913@greenville-kid-calendar
+DTSTAMP:20261007T172501Z
+DTSTART;TZID=America/New_York:20261121T100000
+DTEND;TZID=America/New_York:20261121T110000
+SUMMARY:[2+] TCMU Tots
+LOCATION:TCMU Greenville\, 300 College St\, Greenville\, SC\, 29601
+DESCRIPTION:Designed to spark curiosity and creativity for little explorers
+ ! Little ones ages 2–5 will enjoy sensory play and develop fine motor an
+ d social skills. Located in Get Up & Grow on the third floor. Source: The 
+ Children's Museum of the Upstate. Check the linked organizer page before l
+ eaving.
+URL:https://tcmupstate.org/event/tcmu-tots-16/2026-11-21/
+END:VEVENT
+BEGIN:VEVENT
+UID:ff07a5d136de2dbcd41b98f5@greenville-kid-calendar
+DTSTAMP:20261007T172501Z
+DTSTART;TZID=America/New_York:20261121T103000
+DTEND;TZID=America/New_York:20261121T104500
+SUMMARY:Storytime on the Steps
+LOCATION:M. Judson Booksellers\, 130 South Main Street\, Greenville\, SC\, 
+ United States
+DESCRIPTION:Bring your littles to the front steps of M. Judson for our twic
+ e-weekly story time! Enjoy some wonderful picture books read aloud to the 
+ crowd by our very own booksellers\, and children will even get a sweet tre
+ at to go. If you catch them on a rainy day or cold day\, storytime is held
+  inside in the children's section toward the back of the store. Keep up wi
+ th changes to the schedule here> Book Store & Coffee Shop in Downtown Gree
+ nville Check out our Review of Storytime on the Steps at M. Judson Booksel
+ lers! Source: M. Judson Booksellers. Check the linked organizer page befor
+ e leaving.
+URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
+ 11-21
+END:VEVENT
+BEGIN:VEVENT
+UID:0970ab6d52ecd7ad2c4d27a2@greenville-kid-calendar
+DTSTAMP:20261007T172501Z
+DTSTART;TZID=America/New_York:20261121T113000
+DTEND;TZID=America/New_York:20261121T120000
+SUMMARY:Story Time & More
+LOCATION:TCMU Greenville\, 300 College St\, Greenville\, SC\, 29601
+DESCRIPTION:Listen\, respond and imagine during Story Time & More in TCMU
+ ’s whimsical Dream Theater ! Young learners can listen and respond to a 
+ story and participate in enrichment activities designed to ignite fun\, di
+ scovery and learning. Source: The Children's Museum of the Upstate. Check 
+ the linked organizer page before leaving.
+URL:https://tcmupstate.org/event/story-time-more-174/2026-11-21/
 END:VEVENT
 END:VCALENDAR
