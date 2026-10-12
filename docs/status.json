@@ -1,18 +1,20 @@
 {
-  "generated_at": "2026-10-11T12:18:46.156701-04:00",
-  "window_start": "2026-10-11",
-  "window_end": "2026-11-25",
-  "event_count": 116,
+  "generated_at": "2026-10-12T15:47:51.180561-04:00",
+  "window_start": "2026-10-12",
+  "window_end": "2026-11-26",
+  "event_count": 56,
   "source_counts": {
     "library": 11,
-    "tcmu": 61,
+    "tcmu": 0,
     "upcountry_history_museum": 0,
-    "kidding_around_supplemental": 44,
-    "m_judson": 12,
+    "kidding_around_supplemental": 45,
+    "m_judson": 13,
     "greenville_zoo": 16,
     "sc_children_theatre": 10,
     "downtown_greenville": 4,
     "hughes_main_supplemental": 2
   },
-  "warnings": []
+  "warnings": [
+    "TCMU fetch failed: HTTP Error 503: Service Unavailable"
+  ]
 }
