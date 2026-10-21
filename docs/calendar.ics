@@ -26,162 +26,8 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:fae119f3698addb4a8e63356@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
-DTSTART;TZID=America/New_York:20261017T080000
-DTEND;TZID=America/New_York:20261017T120000
-SUMMARY:TD Saturday Market- Downtown Greenville
-LOCATION:Downtown Greenville\, Main Street\, Greenville\, SC\, 29601\, Unit
- ed States
-DESCRIPTION:Each Saturday morning from early May through late October\, two
-  blocks of downtown Greenville’s Main Street are transformed into the TD
-  Saturday Market\, a vibrant open-air marketplace in the heart of the city
- . The market features more than 75 vendors offering seasonal produce\, pre
- pared foods\, and handcrafted goods\, creating a lively community gatherin
- g space every week. LEARN MORE HERE 🥕 Greenville Saturday Market\, SC -
-  Official Website | Official Website Find special market happenings each w
- eek right here > Market Happenings | Greenville Saturday Market\, SC - Off
- icial Website Check for cancellations and special events on the TD Saturda
- y Market Instagram What to Expect Fresh\, seasonal produce from farms loca
- ted within 100 miles of Greenville Locally produced and prepared food item
- s Handmade crafts and artisan goods Vendors encouraged to use locally sour
- ced materials for crafts Experience The TD Saturday Market draws thousands
-  of visitors each week who come to shop\, explore\, and connect with local
-  growers\, makers\, and artisans in a welcoming downtown setting. Why Visi
- t It’s a long-standing Greenville tradition that highlights local agricu
- lture\, craftsmanship\, and community. The market offers a chance to exper
- ience the best of the region in one place every Saturday morning. Source: 
- Downtown Greenville. Check the linked organizer page before leaving.
-URL:https://kiddingaroundgreenville.com/events/td-saturday-market-downtown-
- greenville-2026-10-17
-END:VEVENT
-BEGIN:VEVENT
-UID:0a0954bfc58018c34639a954@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
-DTSTART;TZID=America/New_York:20261017T100000
-DTEND;TZID=America/New_York:20261017T113000
-SUMMARY:[3+] Story Hour at SC Children's Theatre
-LOCATION:South Carolina Children's Theatre\, 153 Augusta Street\, Greenvill
- e\, SC\, United States
-DESCRIPTION:Little ones can enjoy a high-energy\, kid-friendly storytime at
-  SC Children's Theatre! A Teaching Artist brings a story by Aaron Reynolds
-  to life in the Prisma Health Lobby with audience participation and simple
-  interaction. Performances last no longer than 30 minutes\, so they're per
- fect for wiggly young patrons. Shows at 10am and 11am. Reservations aren't
-  required\, and the parking lot fee is waived for story time patrons. Sour
- ce: South Carolina Children's Theatre. Check the linked organizer page bef
- ore leaving.
-URL:https://kiddingaroundgreenville.com/events/story-hour-at-sc-childrens-t
- heatre
-END:VEVENT
-BEGIN:VEVENT
-UID:61f36ecfab34fba3818283bc@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
-DTSTART;TZID=America/New_York:20261017T103000
-DTEND;TZID=America/New_York:20261017T104500
-SUMMARY:Storytime on the Steps
-LOCATION:M. Judson Booksellers\, 130 South Main Street\, Greenville\, SC\, 
- United States
-DESCRIPTION:Bring your littles to the front steps of M. Judson for our twic
- e-weekly story time! Enjoy some wonderful picture books read aloud to the 
- crowd by our very own booksellers\, and children will even get a sweet tre
- at to go. If you catch them on a rainy day or cold day\, storytime is held
-  inside in the children's section toward the back of the store. Keep up wi
- th changes to the schedule here> Book Store & Coffee Shop in Downtown Gree
- nville Check out our Review of Storytime on the Steps at M. Judson Booksel
- lers! Source: M. Judson Booksellers. Check the linked organizer page befor
- e leaving.
-URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
- 10-17
-END:VEVENT
-BEGIN:VEVENT
-UID:a5b1d72a353cc20b2dbf03df@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
-DTSTART;TZID=America/New_York:20261017T150000
-DTEND;TZID=America/New_York:20261017T200000
-SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
-LOCATION:The Greenville Zoo\, 150 Cleveland Park Drive\, Greenville\, SC\, 
- United States
-DESCRIPTION:The Greenville Zoo's family-friendly Halloween tradition return
- s with trick-or-treating\, Dragon Alley\, Ghost Town\, and a glowing light
-  tunnel. Costumes encouraged! Dates & Hours: October 14th - 31st\, 2026\; 
- 3 pm - 8 pm Open Halloween from 1 pm - 4 pm Trick-or-Treat Upgrade require
- d per participant Limited discounted tickets online - buy early $2 upcharg
- e at the ticket booth Bring your own trick-or-treat bag Boo Babies (ages 0
- –2) are free\, but candy requires an upgrade Children must be with an ad
- ult Link: https://www.greenvillezoo.com/boo-in-the-zoo Source: Greenville 
- Zoo. Check the linked organizer page before leaving.
-URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
- -greenville-zoo-4
-END:VEVENT
-BEGIN:VEVENT
-UID:b31b243382842f95bef1ed12@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
-DTSTART;TZID=America/New_York:20261018T150000
-DTEND;TZID=America/New_York:20261018T200000
-SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
-LOCATION:The Greenville Zoo\, 150 Cleveland Park Drive\, Greenville\, SC\, 
- United States
-DESCRIPTION:The Greenville Zoo's family-friendly Halloween tradition return
- s with trick-or-treating\, Dragon Alley\, Ghost Town\, and a glowing light
-  tunnel. Costumes encouraged! Dates & Hours: October 14th - 31st\, 2026\; 
- 3 pm - 8 pm Open Halloween from 1 pm - 4 pm Trick-or-Treat Upgrade require
- d per participant Limited discounted tickets online - buy early $2 upcharg
- e at the ticket booth Bring your own trick-or-treat bag Boo Babies (ages 0
- –2) are free\, but candy requires an upgrade Children must be with an ad
- ult Link: https://www.greenvillezoo.com/boo-in-the-zoo Source: Greenville 
- Zoo. Check the linked organizer page before leaving.
-URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
- -greenville-zoo-5
-END:VEVENT
-BEGIN:VEVENT
-UID:fffc73adb9a43910dbdf71b0@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
-DTSTART:20261019T140000Z
-DTEND:20261019T143000Z
-SUMMARY:[18m+] Musical Jamboree
-LOCATION:Hughes Main Library\, 25 Heritage Green Place\, Greenville\, SC 29
- 601
-DESCRIPTION:Explore children's literature through music\, songs\, creative 
- movement\, and instrument play for ages 18 mos–4 yrs. Source: Greenville
-  County Library. Check the linked organizer page before leaving.
-URL:https://www.greenvillelibrary.org/event-series/musical-jamboree
-END:VEVENT
-BEGIN:VEVENT
-UID:040d8d599cc3412574c1468b@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
-DTSTART;TZID=America/New_York:20261020T100000
-DTEND;TZID=America/New_York:20261020T110000
-SUMMARY:[3+] Story Hour at SC Children's Theatre
-LOCATION:South Carolina Children's Theatre\, 153 Augusta Street\, Greenvill
- e\, SC\, United States
-DESCRIPTION:Little ones can enjoy a high-energy\, kid-friendly storytime at
-  SC Children's Theatre! A Teaching Artist brings a story by Aaron Reynolds
-  to life in the Prisma Health Lobby with audience participation and simple
-  interaction. Performances last no longer than 30 minutes\, so they're per
- fect for wiggly young patrons. Shows at 10am and 11am. Reservations aren't
-  required\, and the parking lot fee is waived for story time patrons. Sour
- ce: South Carolina Children's Theatre. Check the linked organizer page bef
- ore leaving.
-URL:https://kiddingaroundgreenville.com/events/story-hour-at-sc-childrens-t
- heatre-2
-END:VEVENT
-BEGIN:VEVENT
-UID:8b95f05fbbd3d4fcb3be5bb5@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
-DTSTART:20261020T143000Z
-DTEND:20261020T151500Z
-SUMMARY:Stay and Play!
-LOCATION:Hughes Main Library\, 25 Heritage Green Place\, Greenville\, SC 29
- 601
-DESCRIPTION:Build kindergarten readiness skills at this drop-in event for a
- ges 5 & under. Source: Greenville County Library. Check the linked organiz
- er page before leaving.
-URL:https://www.greenvillelibrary.org/event-series/stay-and-play
-END:VEVENT
-BEGIN:VEVENT
 UID:b1aac5ed960998cf096b2010@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261021T103000
 DTEND;TZID=America/New_York:20261021T104500
 SUMMARY:Storytime on the Steps
@@ -201,7 +47,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:e4331821040788408eea2602@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261021T150000
 DTEND;TZID=America/New_York:20261021T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -221,7 +67,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:9cab5e2b92ec000274422f0f@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART:20261022T140000Z
 DTEND:20261022T143000Z
 SUMMARY:[18m+] Toddler Tales
@@ -234,7 +80,7 @@ URL:https://www.greenvillelibrary.org/event-series/toddler-tales
 END:VEVENT
 BEGIN:VEVENT
 UID:cd38ef2d44cc7bf0021ffa71@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART:20261022T150000Z
 DTEND:20261022T153000Z
 SUMMARY:Bouncing Babies
@@ -247,7 +93,7 @@ URL:https://www.greenvillelibrary.org/event-series/bouncing-babies
 END:VEVENT
 BEGIN:VEVENT
 UID:d8e3d9c560dbc5f7c3ac7787@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261022T150000
 DTEND;TZID=America/New_York:20261022T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -267,7 +113,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:1ee9b441684ac952bd7478b6@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261023T150000
 DTEND;TZID=America/New_York:20261023T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -287,7 +133,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:b8d4152282ce6f1980c03713@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261024T080000
 DTEND;TZID=America/New_York:20261024T120000
 SUMMARY:TD Saturday Market- Downtown Greenville
@@ -317,7 +163,7 @@ URL:https://kiddingaroundgreenville.com/events/td-saturday-market-downtown-
 END:VEVENT
 BEGIN:VEVENT
 UID:b64ba237b06715d75c13c5d8@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261024T103000
 DTEND;TZID=America/New_York:20261024T104500
 SUMMARY:Storytime on the Steps
@@ -337,7 +183,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:869e38eb9434feba6b15bd0b@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261024T103000
 DTEND;TZID=America/New_York:20261024T113000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -359,19 +205,19 @@ DESCRIPTION:A Musical Adventure Based on Jon Klassen's Beloved Picture Book
   that's as clever as it is unforgettable." — Peggy Trecker White On Sale
   Now! Saturday\, October 24 at 10:30 AM Saturday\, October 24 at 2:00 PM S
  unday\, October 25 at 2:00 PM Sunday\, October 25 at 4:30 PM - Pay What Yo
- u Can on sale 10/15/26 Saturday\, October 31 at 10:30 AM Saturday\, Octobe
- r 31 at 2:00 PM Sunday\, November 1 at 2:00 PM Saturday\, November 7 at 10
- :30 AM Saturday\, November 7 at 2:00 PM Sunday\, November 8 at 2:00 PM Thi
- s production is licensed by arrangement with Casarotto Ramsay & Associates
-  Ltd.\, 7 Savoy Court Strand\, London WC2R 0EX\; The Agency (London) Ltd\,
-  24 Pottery Lane\, London W11 4LZ\; and Writers House LLC\, 120 Broadway\,
-  22nd Floor\, New York\, NY Source: South Carolina Children's Theatre. Che
- ck the linked organizer page before leaving.
+ u Can on sale 10/15/26 (sold out) Saturday\, October 31 at 10:30 AM Saturd
+ ay\, October 31 at 2:00 PM Sunday\, November 1 at 2:00 PM Saturday\, Novem
+ ber 7 at 10:30 AM Saturday\, November 7 at 2:00 PM Sunday\, November 8 at 
+ 2:00 PM This production is licensed by arrangement with Casarotto Ramsay &
+  Associates Ltd.\, 7 Savoy Court Strand\, London WC2R 0EX\; The Agency (Lo
+ ndon) Ltd\, 24 Pottery Lane\, London W11 4LZ\; and Writers House LLC\, 120
+  Broadway\, 22nd Floor\, New York\, NY Source: South Carolina Children's T
+ heatre. Check the linked organizer page before leaving.
 URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct
 END:VEVENT
 BEGIN:VEVENT
 UID:e94c7f3e9e53c8bdfbe8aa91@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261024T140000
 DTEND;TZID=America/New_York:20261024T150000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -405,7 +251,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-2
 END:VEVENT
 BEGIN:VEVENT
 UID:90c11658eb7cd74a86cdcc14@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261024T150000
 DTEND;TZID=America/New_York:20261024T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -425,7 +271,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:2ffcce6c310a9708466bcecc@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261025T140000
 DTEND;TZID=America/New_York:20261025T150000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -459,7 +305,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-3
 END:VEVENT
 BEGIN:VEVENT
 UID:3456e3ff3588d14c4c6363c2@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261025T150000
 DTEND;TZID=America/New_York:20261025T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -479,7 +325,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:60bb1f71f01ea5b79e5627f6@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261025T163000
 DTEND;TZID=America/New_York:20261025T173000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -513,7 +359,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-4
 END:VEVENT
 BEGIN:VEVENT
 UID:0bae1f65ce7b4ec3363d6739@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261026T100000
 DTEND;TZID=America/New_York:20261026T103000
 SUMMARY:[18m+] Musical Jamboree: Monster Mash @ Hughes Main
@@ -528,28 +374,8 @@ URL:https://kiddingaroundgreenville.com/events/musical-jamboree-monster-mas
  h-hughes-main
 END:VEVENT
 BEGIN:VEVENT
-UID:3f801720b5d97a2d43e42bc2@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
-DTSTART;TZID=America/New_York:20261026T150000
-DTEND;TZID=America/New_York:20261026T200000
-SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
-LOCATION:The Greenville Zoo\, 150 Cleveland Park Drive\, Greenville\, SC\, 
- United States
-DESCRIPTION:The Greenville Zoo's family-friendly Halloween tradition return
- s with trick-or-treating\, Dragon Alley\, Ghost Town\, and a glowing light
-  tunnel. Costumes encouraged! Dates & Hours: October 14th - 31st\, 2026\; 
- 3 pm - 8 pm Open Halloween from 1 pm - 4 pm Trick-or-Treat Upgrade require
- d per participant Limited discounted tickets online - buy early $2 upcharg
- e at the ticket booth Bring your own trick-or-treat bag Boo Babies (ages 0
- –2) are free\, but candy requires an upgrade Children must be with an ad
- ult Link: https://www.greenvillezoo.com/boo-in-the-zoo Source: Greenville 
- Zoo. Check the linked organizer page before leaving.
-URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
- -greenville-zoo-11
-END:VEVENT
-BEGIN:VEVENT
 UID:6bcd51da3da06ab7d303f4a1@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261027T150000
 DTEND;TZID=America/New_York:20261027T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -569,7 +395,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:0b42f9df479e2f6fe17c0c04@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261028T103000
 DTEND;TZID=America/New_York:20261028T104500
 SUMMARY:Storytime on the Steps
@@ -589,7 +415,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:05fd4104cc27c7e5a16e5c8e@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261028T150000
 DTEND;TZID=America/New_York:20261028T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -609,7 +435,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:1beb375a1027c0679396dddc@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261029T100000
 DTEND;TZID=America/New_York:20261029T103000
 SUMMARY:[18m+] Not-So-Spooky Toddler Tales- Hughes Main Library
@@ -625,7 +451,7 @@ URL:https://kiddingaroundgreenville.com/events/not-so-spooky-toddler-tales-
 END:VEVENT
 BEGIN:VEVENT
 UID:9b66c8d49cd75fdb5b143144@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261029T150000
 DTEND;TZID=America/New_York:20261029T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -645,7 +471,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:f9872597b19ecde096bc6439@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261030T150000
 DTEND;TZID=America/New_York:20261030T200000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -665,7 +491,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:266264b36300121c3ec64856@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261031T080000
 DTEND;TZID=America/New_York:20261031T120000
 SUMMARY:TD Saturday Market- Downtown Greenville
@@ -695,7 +521,7 @@ URL:https://kiddingaroundgreenville.com/events/td-saturday-market-downtown-
 END:VEVENT
 BEGIN:VEVENT
 UID:054d2ee6b0494042824bee37@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261031T100000
 DTEND;TZID=America/New_York:20261031T150000
 SUMMARY:Trick or Treat on Main Street
@@ -712,7 +538,7 @@ URL:https://kiddingaroundgreenville.com/events/trick-or-treat-on-main-stree
 END:VEVENT
 BEGIN:VEVENT
 UID:a3c0f9338d706091cea29ee3@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261031T103000
 DTEND;TZID=America/New_York:20261031T104500
 SUMMARY:Storytime on the Steps
@@ -732,7 +558,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:5d6b35679911093225d5983d@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261031T103000
 DTEND;TZID=America/New_York:20261031T113000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -766,7 +592,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-5
 END:VEVENT
 BEGIN:VEVENT
 UID:9806efa9e75f9f1f7cc43513@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261031T130000
 DTEND;TZID=America/New_York:20261031T160000
 SUMMARY:Prisma Health Boo in the Zoo - Greenville Zoo
@@ -786,7 +612,7 @@ URL:https://kiddingaroundgreenville.com/events/prisma-health-boo-in-the-zoo
 END:VEVENT
 BEGIN:VEVENT
 UID:6f7a048545d9fb4b0ddce646@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261031T140000
 DTEND;TZID=America/New_York:20261031T150000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -820,7 +646,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-6
 END:VEVENT
 BEGIN:VEVENT
 UID:a771968e875c37f423f8cd0f@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261101T140000
 DTEND;TZID=America/New_York:20261101T150000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -854,7 +680,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-7
 END:VEVENT
 BEGIN:VEVENT
 UID:42f683aafe604548b601d228@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART:20261102T150000Z
 DTEND:20261102T153000Z
 SUMMARY:[18m+] Musical Jamboree
@@ -867,7 +693,7 @@ URL:https://www.greenvillelibrary.org/event-series/musical-jamboree
 END:VEVENT
 BEGIN:VEVENT
 UID:5be4c51321afed7f622de712@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261104T103000
 DTEND;TZID=America/New_York:20261104T104500
 SUMMARY:Storytime on the Steps
@@ -887,7 +713,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:02b8555ac5fafb37c1129dc4@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART:20261104T153000Z
 DTEND:20261104T161500Z
 SUMMARY:[2+] Preschool Picassos
@@ -900,7 +726,7 @@ URL:https://www.greenvillelibrary.org/event-series/preschool-picassos
 END:VEVENT
 BEGIN:VEVENT
 UID:ec60ea08ae0389c24138b5d1@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART:20261105T150000Z
 DTEND:20261105T153000Z
 SUMMARY:[18m+] Toddler Tales
@@ -912,8 +738,21 @@ DESCRIPTION:Stories\, movement\, and music for ages 18 mos–4 yrs. Source:
 URL:https://www.greenvillelibrary.org/event-series/toddler-tales
 END:VEVENT
 BEGIN:VEVENT
+UID:6ce767ba21781f0d5b94a58e@greenville-kid-calendar
+DTSTAMP:20261021T151310Z
+DTSTART:20261105T160000Z
+DTEND:20261105T163000Z
+SUMMARY:Bouncing Babies
+LOCATION:Hughes Main Library\, 25 Heritage Green Place\, Greenville\, SC 29
+ 601
+DESCRIPTION:Stories\, rhymes\, music\, and bouncing games for ages 1 mo–1
+ 8 mos. Includes hands-on play time and book sharing. Source: Greenville Co
+ unty Library. Check the linked organizer page before leaving.
+URL:https://www.greenvillelibrary.org/event-series/bouncing-babies
+END:VEVENT
+BEGIN:VEVENT
 UID:4af3de5e70241671bfcab0b3@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261107T103000
 DTEND;TZID=America/New_York:20261107T104500
 SUMMARY:Storytime on the Steps
@@ -933,7 +772,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:1a2c8abecb0bafcc20a2330d@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261107T103000
 DTEND;TZID=America/New_York:20261107T113000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -967,7 +806,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-8
 END:VEVENT
 BEGIN:VEVENT
 UID:7de85e4a518b6b9098e34323@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261107T140000
 DTEND;TZID=America/New_York:20261107T150000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -1001,7 +840,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-9
 END:VEVENT
 BEGIN:VEVENT
 UID:07b8a0b60af222289d47ab95@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261108T140000
 DTEND;TZID=America/New_York:20261108T150000
 SUMMARY:[3+] I Want My Hat Back - SCCT
@@ -1035,7 +874,7 @@ URL:https://kiddingaroundgreenville.com/events/i-want-my-hat-back-scct-10
 END:VEVENT
 BEGIN:VEVENT
 UID:b28a753510d58b67810be5b9@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART:20261109T150000Z
 DTEND:20261109T153000Z
 SUMMARY:[18m+] Musical Jamboree
@@ -1048,7 +887,7 @@ URL:https://www.greenvillelibrary.org/event-series/musical-jamboree
 END:VEVENT
 BEGIN:VEVENT
 UID:5a0148741cd0b2d74310dba5@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261111T103000
 DTEND;TZID=America/New_York:20261111T104500
 SUMMARY:Storytime on the Steps
@@ -1068,7 +907,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:7451a320bf4f1f0ef16023c6@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART:20261111T153000Z
 DTEND:20261111T161500Z
 SUMMARY:[2+] Science Station\\\, Jr.
@@ -1081,7 +920,7 @@ URL:https://www.greenvillelibrary.org/event-series/science-station-jr
 END:VEVENT
 BEGIN:VEVENT
 UID:c2a608c4559d2d6450efa3df@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART:20261112T150000Z
 DTEND:20261112T153000Z
 SUMMARY:[18m+] Toddler Tales
@@ -1094,7 +933,7 @@ URL:https://www.greenvillelibrary.org/event-series/toddler-tales
 END:VEVENT
 BEGIN:VEVENT
 UID:b4529d6bb2517b842cecdabe@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261114T100000
 DTEND;TZID=America/New_York:20261114T113000
 SUMMARY:[3+] Story Hour at SC Children's Theatre
@@ -1113,7 +952,7 @@ URL:https://kiddingaroundgreenville.com/events/story-hour-at-sc-childrens-t
 END:VEVENT
 BEGIN:VEVENT
 UID:5e15d2b1f1182aaaaac4358b@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261114T103000
 DTEND;TZID=America/New_York:20261114T104500
 SUMMARY:Storytime on the Steps
@@ -1133,7 +972,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:b58cc0479e9681c58b514e4a@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261117T100000
 DTEND;TZID=America/New_York:20261117T113000
 SUMMARY:[3+] Story Hour at SC Children's Theatre
@@ -1152,7 +991,7 @@ URL:https://kiddingaroundgreenville.com/events/story-hour-at-sc-childrens-t
 END:VEVENT
 BEGIN:VEVENT
 UID:e87b0f54c07bbbd0c4934ce5@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261118T103000
 DTEND;TZID=America/New_York:20261118T104500
 SUMMARY:Storytime on the Steps
@@ -1172,7 +1011,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:074a9bdaee2b38ae1f3ad330@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261120T193000
 DTEND;TZID=America/New_York:20261120T203000
 SUMMARY:[3+] Rudolph the Red-Nosed Reindeer- South Carolina Children's Thea
@@ -1200,7 +1039,7 @@ URL:https://kiddingaroundgreenville.com/events/rudolph-the-red-nosed-reinde
 END:VEVENT
 BEGIN:VEVENT
 UID:ff07a5d136de2dbcd41b98f5@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261121T103000
 DTEND;TZID=America/New_York:20261121T104500
 SUMMARY:Storytime on the Steps
@@ -1220,7 +1059,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:356d65a4e20031d915e44de0@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261121T140000
 DTEND;TZID=America/New_York:20261121T150000
 SUMMARY:[3+] Rudolph the Red-Nosed Reindeer- South Carolina Children's Thea
@@ -1248,7 +1087,7 @@ URL:https://kiddingaroundgreenville.com/events/rudolph-the-red-nosed-reinde
 END:VEVENT
 BEGIN:VEVENT
 UID:14428ad7a3abd9a782a4b567@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261121T180000
 DTEND;TZID=America/New_York:20261121T190000
 SUMMARY:[3+] Rudolph the Red-Nosed Reindeer- South Carolina Children's Thea
@@ -1276,7 +1115,7 @@ URL:https://kiddingaroundgreenville.com/events/rudolph-the-red-nosed-reinde
 END:VEVENT
 BEGIN:VEVENT
 UID:65bfc78398b3ff7ce2e39d30@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261122T140000
 DTEND;TZID=America/New_York:20261122T150000
 SUMMARY:[3+] Rudolph the Red-Nosed Reindeer- South Carolina Children's Thea
@@ -1304,7 +1143,7 @@ URL:https://kiddingaroundgreenville.com/events/rudolph-the-red-nosed-reinde
 END:VEVENT
 BEGIN:VEVENT
 UID:906354737bc617775c0aae6e@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261122T180000
 DTEND;TZID=America/New_York:20261122T190000
 SUMMARY:[3+] Rudolph the Red-Nosed Reindeer- South Carolina Children's Thea
@@ -1332,7 +1171,7 @@ URL:https://kiddingaroundgreenville.com/events/rudolph-the-red-nosed-reinde
 END:VEVENT
 BEGIN:VEVENT
 UID:dddf18f1352beca7c581c136@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261125T103000
 DTEND;TZID=America/New_York:20261125T104500
 SUMMARY:Storytime on the Steps
@@ -1352,7 +1191,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:a5828fd971a51190a32bec58@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261127T140000
 DTEND;TZID=America/New_York:20261127T150000
 SUMMARY:[3+] Rudolph the Red-Nosed Reindeer- South Carolina Children's Thea
@@ -1380,7 +1219,7 @@ URL:https://kiddingaroundgreenville.com/events/rudolph-the-red-nosed-reinde
 END:VEVENT
 BEGIN:VEVENT
 UID:7d187ecce88965e18f8fa0da@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261127T190000
 DTEND;TZID=America/New_York:20261127T200000
 SUMMARY:[3+] Rudolph the Red-Nosed Reindeer- South Carolina Children's Thea
@@ -1408,7 +1247,7 @@ URL:https://kiddingaroundgreenville.com/events/rudolph-the-red-nosed-reinde
 END:VEVENT
 BEGIN:VEVENT
 UID:8f6b153b0a38336f5a337b5e@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261128T103000
 DTEND;TZID=America/New_York:20261128T104500
 SUMMARY:Storytime on the Steps
@@ -1428,7 +1267,7 @@ URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:341d18cd103b3114fae32f8e@greenville-kid-calendar
-DTSTAMP:20261017T134223Z
+DTSTAMP:20261021T151310Z
 DTSTART;TZID=America/New_York:20261128T140000
 DTEND;TZID=America/New_York:20261129T150000
 SUMMARY:[3+] Rudolph the Red-Nosed Reindeer- South Carolina Children's Thea
@@ -1453,5 +1292,124 @@ DESCRIPTION:The holiday classic soars off the screen in this musical adapta
  tre. Check the linked organizer page before leaving.
 URL:https://kiddingaroundgreenville.com/events/rudolph-the-red-nosed-reinde
  er-south-carolina-childrens-theatre-7
+END:VEVENT
+BEGIN:VEVENT
+UID:017394fc709a4606d0532016@greenville-kid-calendar
+DTSTAMP:20261021T151310Z
+DTSTART;TZID=America/New_York:20261202T103000
+DTEND;TZID=America/New_York:20261202T104500
+SUMMARY:Storytime on the Steps
+LOCATION:M. Judson Booksellers\, 130 South Main Street\, Greenville\, SC\, 
+ United States
+DESCRIPTION:Bring your littles to the front steps of M. Judson for our twic
+ e-weekly story time! Enjoy some wonderful picture books read aloud to the 
+ crowd by our very own booksellers\, and children will even get a sweet tre
+ at to go. If you catch them on a rainy day or cold day\, storytime is held
+  inside in the children's section toward the back of the store. Keep up wi
+ th changes to the schedule here> Book Store & Coffee Shop in Downtown Gree
+ nville Check out our Review of Storytime on the Steps at M. Judson Booksel
+ lers! Source: M. Judson Booksellers. Check the linked organizer page befor
+ e leaving.
+URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
+ 12-02
+END:VEVENT
+BEGIN:VEVENT
+UID:75b93f57b1b3cfc566f1378a@greenville-kid-calendar
+DTSTAMP:20261021T151310Z
+DTSTART;TZID=America/New_York:20261203T173000
+DTEND;TZID=America/New_York:20261203T203000
+SUMMARY:Neighborhood Night
+LOCATION:Upcountry History Museum\, 540 Buncombe Street\, Greenville\, SC\,
+  29601
+DESCRIPTION:Access for All! UHM is open on the first Thursday evening of se
+ lect months throughout 2026. The Museum operates with the firm belief that
+  its exhibits\, events\, and programming should be accessible to all\, reg
+ ardless of cultural\, ethnic\, geographic\, or socioeconomic differences. 
+ The Neighborhood Night initiative\, introduced in 2015\, provides free acc
+ ess to educational programming for underserved children\, families\, and a
+ dults. WHEN: Thursday\, December 3 | 5:30 p.m. – 8:30 p.m. WHERE: Upcoun
+ try History Museum HOW: Drop in to explore the Museum and its changing exh
+ ibitions. No registration is required. WHY: Neighborhood Nights demonstrat
+ e the Museum’s commitment to accessibility\, regardless of economic cons
+ traints by providing full access to the Museum’s diverse exhibitions. CO
+ ST: FREE! QUEST Source: Upcountry History Museum. Check the linked organiz
+ er page before leaving.
+URL:https://upcountryhistory.org/event/neighborhood-night-38/
+END:VEVENT
+BEGIN:VEVENT
+UID:9d5618f3d94e6a3afc8b72d2@greenville-kid-calendar
+DTSTAMP:20261021T151310Z
+DTSTART;TZID=America/New_York:20261204T190000
+DTEND;TZID=America/New_York:20261204T200000
+SUMMARY:[3+] Rudolph the Red-Nosed Reindeer- South Carolina Children's Thea
+ tre
+LOCATION:South Carolina Children's Theatre\, 153 Augusta Street\, Greenvill
+ e\, SC\, United States
+DESCRIPTION:The holiday classic soars off the screen in this musical adapta
+ tion of the beloved TV special! Filled with hits like “Rudolph the Red-N
+ osed Reindeer” and “A Holly Jolly Christmas\,” the show features fav
+ orites including Santa and Mrs. Claus\, Hermey the Elf\, Bumble the Abomin
+ able Snow Monster\, Clarice\, Yukon Cornelius and\, of course\, Rudolph. R
+ un time is about 60 minutes with no intermission. Performed on the Bell St
+ age. Performance dates & times: Fri\, Nov 20 at 7:30 PM Sat\, Nov 21 at 2:
+ 00 PM & 6:00 PM Sun\, Nov 22 at 2:00 PM & 6:00 PM (Pay What You Can\; on s
+ ale 11/12/26) Fri\, Nov 27 at 2:00 PM & 7:00 PM Sat\, Nov 28 at 2:00 PM Su
+ n\, Nov 29 at 2:00 PM Fri\, Dec 4 at 7:00 PM Sat\, Dec 5 at 2:00 PM Sun\, 
+ Dec 6 at 2:00 PM Fri\, Dec 11 at 7:00 PM Sat\, Dec 12 at 2:00 PM Sun\, Dec
+  13 at 2:00 PM Fri\, Dec 18 at 7:00 PM Sat\, Dec 19 at 2:00 PM Sun\, Dec 2
+ 0 at 2:00 PM 🎟️ Cost: $25 per ticket 📍 Location: South Carolina Ch
+ ildren's Theatre (Bell Stage)\, 153 Augusta Street\, Greenville\, SC 29601
+  👉 Read more 🧒 Ages: All ages Source: South Carolina Children's Thea
+ tre. Check the linked organizer page before leaving.
+URL:https://kiddingaroundgreenville.com/events/rudolph-the-red-nosed-reinde
+ er-south-carolina-childrens-theatre-8
+END:VEVENT
+BEGIN:VEVENT
+UID:bad478ec80992d615414f82e@greenville-kid-calendar
+DTSTAMP:20261021T151310Z
+DTSTART;TZID=America/New_York:20261205T103000
+DTEND;TZID=America/New_York:20261205T104500
+SUMMARY:Storytime on the Steps
+LOCATION:M. Judson Booksellers\, 130 South Main Street\, Greenville\, SC\, 
+ United States
+DESCRIPTION:Bring your littles to the front steps of M. Judson for our twic
+ e-weekly story time! Enjoy some wonderful picture books read aloud to the 
+ crowd by our very own booksellers\, and children will even get a sweet tre
+ at to go. If you catch them on a rainy day or cold day\, storytime is held
+  inside in the children's section toward the back of the store. Keep up wi
+ th changes to the schedule here> Book Store & Coffee Shop in Downtown Gree
+ nville Check out our Review of Storytime on the Steps at M. Judson Booksel
+ lers! Source: M. Judson Booksellers. Check the linked organizer page befor
+ e leaving.
+URL:https://kiddingaroundgreenville.com/events/storytime-on-the-steps-2026-
+ 12-05
+END:VEVENT
+BEGIN:VEVENT
+UID:cd6d512aeb08bb6c6935306a@greenville-kid-calendar
+DTSTAMP:20261021T151310Z
+DTSTART;TZID=America/New_York:20261205T140000
+DTEND;TZID=America/New_York:20261206T150000
+SUMMARY:[3+] Rudolph the Red-Nosed Reindeer- South Carolina Children's Thea
+ tre
+LOCATION:South Carolina Children's Theatre\, 153 Augusta Street\, Greenvill
+ e\, SC\, United States
+DESCRIPTION:The holiday classic soars off the screen in this musical adapta
+ tion of the beloved TV special! Filled with hits like “Rudolph the Red-N
+ osed Reindeer” and “A Holly Jolly Christmas\,” the show features fav
+ orites including Santa and Mrs. Claus\, Hermey the Elf\, Bumble the Abomin
+ able Snow Monster\, Clarice\, Yukon Cornelius and\, of course\, Rudolph. R
+ un time is about 60 minutes with no intermission. Performed on the Bell St
+ age. Performance dates & times: Fri\, Nov 20 at 7:30 PM Sat\, Nov 21 at 2:
+ 00 PM & 6:00 PM Sun\, Nov 22 at 2:00 PM & 6:00 PM (Pay What You Can\; on s
+ ale 11/12/26) Fri\, Nov 27 at 2:00 PM & 7:00 PM Sat\, Nov 28 at 2:00 PM Su
+ n\, Nov 29 at 2:00 PM Fri\, Dec 4 at 7:00 PM Sat\, Dec 5 at 2:00 PM Sun\, 
+ Dec 6 at 2:00 PM Fri\, Dec 11 at 7:00 PM Sat\, Dec 12 at 2:00 PM Sun\, Dec
+  13 at 2:00 PM Fri\, Dec 18 at 7:00 PM Sat\, Dec 19 at 2:00 PM Sun\, Dec 2
+ 0 at 2:00 PM 🎟️ Cost: $25 per ticket 📍 Location: South Carolina Ch
+ ildren's Theatre (Bell Stage)\, 153 Augusta Street\, Greenville\, SC 29601
+  👉 Read more 🧒 Ages: All ages Source: South Carolina Children's Thea
+ tre. Check the linked organizer page before leaving.
+URL:https://kiddingaroundgreenville.com/events/rudolph-the-red-nosed-reinde
+ er-south-carolina-childrens-theatre-9
 END:VEVENT
 END:VCALENDAR
