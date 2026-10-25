@@ -227,8 +227,22 @@ def tcmu_events(start_day: date, end_day: date) -> tuple[list[Event], list[str]]
         page += 1
 
     for item in items:
-        venue = (item.get("venue") or {}).get("venue", "")
-        if venue != "TCMU Greenville":
+        venue_value = item.get("venue")
+        if isinstance(venue_value, dict):
+            venues = [venue_value]
+        elif isinstance(venue_value, list):
+            venues = [venue for venue in venue_value if isinstance(venue, dict)]
+        else:
+            venues = []
+        venue = next(
+            (
+                candidate
+                for candidate in venues
+                if candidate.get("venue") == "TCMU Greenville"
+            ),
+            None,
+        )
+        if venue is None:
             continue
         title = clean_html(item.get("title", ""))
         label = tcmu_label(title)
@@ -241,11 +255,11 @@ def tcmu_events(start_day: date, end_day: date) -> tuple[list[Event], list[str]]
             errors.append(f"TCMU record parse error ({title}): {exc}")
             continue
         address_bits = [
-            (item.get("venue") or {}).get("venue", ""),
-            (item.get("venue") or {}).get("address", ""),
-            (item.get("venue") or {}).get("city", ""),
-            (item.get("venue") or {}).get("state", ""),
-            (item.get("venue") or {}).get("zip", ""),
+            venue.get("venue", ""),
+            venue.get("address", ""),
+            venue.get("city", ""),
+            venue.get("state", ""),
+            venue.get("zip", ""),
         ]
         location = ", ".join(str(bit).strip() for bit in address_bits if bit)
         events.append(
