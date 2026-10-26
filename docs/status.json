@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-10-25T10:43:27.748448-04:00",
-  "window_start": "2026-10-25",
-  "window_end": "2026-12-09",
-  "event_count": 118,
+  "generated_at": "2026-10-26T12:47:03.275035-04:00",
+  "window_start": "2026-10-26",
+  "window_end": "2026-12-10",
+  "event_count": 120,
   "source_counts": {
     "library": 9,
-    "tcmu": 63,
+    "tcmu": 64,
     "upcountry_history_museum": 1,
-    "kidding_around_supplemental": 45,
+    "kidding_around_supplemental": 46,
     "m_judson": 13,
-    "greenville_zoo": 7,
-    "sc_children_theatre": 21,
+    "greenville_zoo": 6,
+    "sc_children_theatre": 24,
     "downtown_greenville": 2,
-    "hughes_main_supplemental": 2
+    "hughes_main_supplemental": 1
   },
   "warnings": []
 }
