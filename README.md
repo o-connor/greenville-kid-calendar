@@ -2,7 +2,9 @@
 
 A rolling public iCalendar feed for downtown Greenville activities suitable for active children ages 0–3.
 
-The GitHub Pages site also displays the next two weeks in a responsive calendar view generated from the same feed.
+The GitHub Pages site lets visitors browse the full feed directly in a responsive agenda or week view, with week navigation, keyword search, venue filters, and organizer age labels. Calendar downloads are optional. Stale feeds and source refresh failures are clearly labeled.
+
+The page template lives in `templates/index.html`; the daily generator embeds the latest events into `docs/index.html`, so the design survives feed refreshes.
 
 The feed covers the next 45 days and refreshes daily through GitHub Actions. It currently includes:
 
