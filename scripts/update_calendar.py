@@ -33,6 +33,8 @@ LIBRARY_SERIES = {
     "musical-jamboree": "[18m+] ",
     "science-station-jr": "[2+] ",
     "preschool-picassos": "[2+] ",
+    "story-time": "",
+    "bilingual-story-time": "",
 }
 
 TCMU_RULES = (
@@ -63,10 +65,32 @@ KAG_DOWNTOWN_LOCATION_URL = (
 )
 
 KAG_HUGHES_RULES = (
-    ("lollipops concert", "[3+] "),
     ("musical jamboree", "[18m+] "),
     ("not-so-spooky toddler tales", "[18m+] "),
     ("spooky goose", ""),
+)
+
+CITY_CALENDAR_URL = (
+    "https://www.greenvillesc.gov/department-calendar?"
+    "contentId=15f549d0-135a-4222-af62-e83d5f29488d"
+)
+CITY_EVENT_RULES = (
+    ("zoo tots", "Greenville Zoo", "[2+] "),
+    ("music and movement", "City of Greenville", ""),
+    ("night of lights", "City of Greenville", ""),
+    ("a day with the elves", "City of Greenville", ""),
+    ("poinsettia christmas parade", "City of Greenville", ""),
+    ("td saturday market holiday", "City of Greenville", ""),
+)
+
+LITTLES_WEEKLY_URL = "https://littlesweekly.com/greenville-sc/events.json"
+GCMA_ICS_URL = (
+    "https://gcma.org/backstageIncludes/BackstageCalendar/ICS.aspx?"
+    "CalendarIDs=4,5,7,8,10,11,14,15"
+)
+SYMPHONY_PATTERN = re.compile(
+    r"\b(?:greenville symphony|lollipops?|once upon an orchestra|gso)\b",
+    re.IGNORECASE,
 )
 
 
@@ -81,10 +105,16 @@ class Event:
     url: str
 
 
-def fetch_text(url: str) -> str:
+def fetch_text(url: str, headers: dict[str, str] | None = None) -> str:
+    request_headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "text/html,application/json",
+    }
+    if headers:
+        request_headers.update(headers)
     request = urllib.request.Request(
         url,
-        headers={"User-Agent": USER_AGENT, "Accept": "text/html,application/json"},
+        headers=request_headers,
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         return response.read().decode("utf-8", errors="replace")
@@ -148,6 +178,22 @@ def parse_single_vevent(
         description=re.sub(r"\s+", " ", description).strip(),
         url=source_url,
     )
+
+
+def parse_vevents(
+    ics_text: str,
+    source_url: str,
+    label: str,
+    source: str,
+) -> list[Event]:
+    events: list[Event] = []
+    for block in re.findall(
+        r"BEGIN:VEVENT.*?END:VEVENT", ics_text, flags=re.DOTALL | re.IGNORECASE
+    ):
+        event = parse_single_vevent(block, source_url, label, source)
+        if event:
+            events.append(event)
+    return events
 
 
 def library_events(start_day: date, end_day: date) -> tuple[list[Event], list[str]]:
@@ -333,6 +379,236 @@ def upcountry_events(start_day: date, end_day: date) -> tuple[list[Event], list[
     return events, errors
 
 
+def city_event_selection(title: str) -> tuple[str, str] | None:
+    lowered = title.casefold()
+    if lowered.startswith("event:"):
+        return None
+    for phrase, source, label in CITY_EVENT_RULES:
+        if phrase in lowered:
+            return source, label
+    return None
+
+
+def city_events(start_day: date, end_day: date) -> tuple[list[Event], list[str]]:
+    """Fetch a small, curated family subset from Greenville's official calendar."""
+    try:
+        page = fetch_text(CITY_CALENDAR_URL)
+        token_match = re.search(r'window\.hcmsClientToken="Bearer ([^"]+)', page)
+        if not token_match:
+            raise ValueError("guest calendar token was not present")
+        token = token_match.group(1)
+    except Exception as exc:
+        return [], [f"City of Greenville calendar fetch failed: {exc}"]
+
+    query_base = {
+        "$top": 100,
+        "$filter": (
+            "data/eventdate/iv/startDate ge "
+            f"{start_day.isoformat()}T00:00:00Z and "
+            "data/eventdate/iv/startDate le "
+            f"{end_day.isoformat()}T23:59:59Z"
+        ),
+        "$orderby": "data/eventdate/iv/startDate asc",
+    }
+    items: list[dict] = []
+    errors: list[str] = []
+    skip = 0
+    while True:
+        query = dict(query_base)
+        query["$skip"] = skip
+        url = (
+            "https://content.civicplus.com/api/content/sc-greenville/event?"
+            + urllib.parse.urlencode(query)
+        )
+        try:
+            payload = json.loads(
+                fetch_text(url, {"Authorization": f"Bearer {token}"})
+            )
+        except Exception as exc:
+            if skip == 0:
+                return [], [f"City of Greenville event data failed: {exc}"]
+            errors.append(f"City of Greenville page {skip // 100 + 1} failed: {exc}")
+            break
+        page_items = payload.get("items", [])
+        items.extend(page_items)
+        skip += len(page_items)
+        if not page_items or skip >= int(payload.get("total", 0)):
+            break
+
+    events: list[Event] = []
+    for item in items:
+        data = item.get("data", {})
+        title = clean_html(data.get("title", {}).get("en", ""))
+        selection = city_event_selection(title)
+        if selection is None:
+            continue
+        source, label = selection
+        timing = data.get("eventdate", {}).get("iv", {})
+        try:
+            start = datetime.fromisoformat(timing["startDate"].replace("Z", "+00:00"))
+            end = datetime.fromisoformat(timing["endDate"].replace("Z", "+00:00"))
+        except (KeyError, ValueError) as exc:
+            errors.append(f"City event parse error ({title}): {exc}")
+            continue
+        address = data.get("address", {}).get("iv", {})
+        if isinstance(address, dict):
+            address_bits = [
+                address.get("address1", ""),
+                address.get("address2", ""),
+                address.get("city", ""),
+                address.get("state", ""),
+                address.get("zip", ""),
+            ]
+            location = ", ".join(str(bit).strip() for bit in address_bits if bit)
+        else:
+            location = ""
+        location = (
+            location
+            or data.get("LocationName", {}).get("iv", "")
+            or ("Greenville Zoo, 150 Cleveland Park Drive, Greenville, SC 29601"
+                if source == "Greenville Zoo" else "Downtown Greenville, SC 29601")
+        )
+        registration = data.get("RegistrationLink", {}).get("iv", {})
+        event_url = registration.get("url") if isinstance(registration, dict) else None
+        events.append(
+            Event(
+                source=source,
+                title=f"{label}{title}",
+                start=start,
+                end=end,
+                location=str(location),
+                description=clean_html(data.get("description", {}).get("en", ""))[:800],
+                url=event_url or CITY_CALENDAR_URL,
+            )
+        )
+    return events, errors
+
+
+def parse_littles_time(value: str, event_day: date) -> tuple[datetime, datetime] | None:
+    normalized = value.casefold().replace(" ", "").replace("–", "-").replace("—", "-")
+    match = re.fullmatch(
+        r"(\d{1,2})(?::(\d{2}))?(am|pm)?-(\d{1,2})(?::(\d{2}))?(am|pm)",
+        normalized,
+    )
+    if not match:
+        return None
+    start_hour, start_minute, start_meridiem, end_hour, end_minute, end_meridiem = match.groups()
+    start_meridiem = start_meridiem or end_meridiem
+
+    def clock(hour: str, minute: str | None, meridiem: str) -> time:
+        hour_value = int(hour) % 12 + (12 if meridiem == "pm" else 0)
+        return time(hour_value, int(minute or 0))
+
+    start = datetime.combine(event_day, clock(start_hour, start_minute, start_meridiem), TZ)
+    end = datetime.combine(event_day, clock(end_hour, end_minute, end_meridiem), TZ)
+    if end <= start:
+        end += timedelta(days=1)
+    return start, end
+
+
+def littles_weekly_events(start_day: date, end_day: date) -> tuple[list[Event], list[str]]:
+    """Use Littles Weekly only to fill gaps at approved downtown venues."""
+    try:
+        items = json.loads(fetch_text(LITTLES_WEEKLY_URL)).get("events", [])
+    except Exception as exc:
+        return [], [f"Littles Weekly fetch failed: {exc}"]
+
+    allowed_venues = (
+        "hughes main", "m. judson", "children's museum", "tcmu", "upcountry history",
+        "greenville county museum of art", "greenville zoo", "south carolina children's theatre",
+        "falls park", "unity park", "cancer survivors park", "main street",
+    )
+    generic_names = {"greenville zoo", "children’s museum of the upstate", "children's museum of the upstate"}
+    official_recurring_names = {"bilingual story time", "story time", "tcmu tots"}
+    source_aliases = (
+        ("hughes main", "Greenville County Library"),
+        ("m. judson", "M. Judson Booksellers"),
+        ("children", "The Children's Museum of the Upstate"),
+        ("upcountry", "Upcountry History Museum"),
+        ("museum of art", "Greenville County Museum of Art"),
+        ("zoo", "Greenville Zoo"),
+        ("theatre", "South Carolina Children's Theatre"),
+    )
+    events: list[Event] = []
+    errors: list[str] = []
+    for item in items:
+        title = clean_html(str(item.get("name", "")))
+        venue = clean_html(str(item.get("venue", "")))
+        address = clean_html(str(item.get("address", "")))
+        lowered_venue = venue.casefold()
+        ages = item.get("ages", [])
+        if (
+            title.casefold() in generic_names
+            or title.casefold() in official_recurring_names
+            or SYMPHONY_PATTERN.search(title)
+        ):
+            continue
+        if ages and isinstance(ages, list) and ages[0] is not None and float(ages[0]) > 3:
+            continue
+        if "29601" not in address and not any(name in lowered_venue for name in allowed_venues):
+            continue
+        source = next(
+            (display for fragment, display in source_aliases if fragment in lowered_venue),
+            "Littles Weekly",
+        )
+        for raw_day in item.get("dates", []):
+            try:
+                event_day = date.fromisoformat(raw_day)
+            except (TypeError, ValueError):
+                errors.append(f"Littles Weekly date parse error ({title})")
+                continue
+            if not start_day <= event_day <= end_day:
+                continue
+            timing = parse_littles_time(str(item.get("time", "")), event_day)
+            if timing is None:
+                continue
+            start, end = timing
+            events.append(
+                Event(
+                    source=source,
+                    title=title,
+                    start=start,
+                    end=end,
+                    location=", ".join(bit for bit in (venue, address) if bit),
+                    description=clean_html(str(item.get("description", "")))[:800],
+                    url=item.get("sourceUrl") or item.get("eventUrl") or item.get("pageUrl") or LITTLES_WEEKLY_URL,
+                )
+            )
+    return events, errors
+
+
+def gcma_events(start_day: date, end_day: date) -> tuple[list[Event], list[str]]:
+    try:
+        parsed = parse_vevents(
+            fetch_text(GCMA_ICS_URL),
+            "https://gcma.org/events/",
+            "[3+] ",
+            "Greenville County Museum of Art",
+        )
+    except Exception as exc:
+        return [], [f"Greenville County Museum of Art fetch failed: {exc}"]
+    family_phrases = ("family art adventure", "holiday party for children", "family workshop")
+    events: list[Event] = []
+    for event in parsed:
+        lowered = event.title.casefold()
+        if not any(phrase in lowered for phrase in family_phrases) or "sold out" in lowered:
+            continue
+        if not start_day <= event.start.astimezone(TZ).date() <= end_day:
+            continue
+        events.append(
+            Event(
+                source=event.source,
+                title=event.title,
+                start=event.start,
+                end=event.end,
+                location=event.location or "Greenville County Museum of Art, 420 College Street, Greenville, SC 29601",
+                description=event.description,
+                url=event.url,
+            )
+        )
+    return events, []
+
+
 def kag_event_links(page: str) -> set[str]:
     return {
         html.unescape(url).rstrip("/")
@@ -446,6 +722,10 @@ def canonical_location(location: str) -> str:
         ("south carolina children's theatre", "south carolina children's theatre"),
         ("tcmu greenville", "tcmu greenville"),
         ("upcountry history museum", "upcountry history museum"),
+        ("greenville county museum of art", "greenville county museum of art"),
+        ("cancer survivor", "cancer survivors park"),
+        ("unity park", "unity park"),
+        ("falls park", "falls park"),
         ("downtown greenville", "downtown greenville"),
         ("main street", "downtown greenville"),
     )
@@ -458,6 +738,8 @@ def canonical_location(location: str) -> str:
 def deduplicate(events: list[Event]) -> list[Event]:
     unique: dict[tuple[str, str, str], Event] = {}
     for event in events:
+        if SYMPHONY_PATTERN.search(f"{event.title} {event.description}"):
+            continue
         key = (
             event.start.astimezone(TZ).isoformat(),
             re.sub(r"^\[(?:18m\+|2\+|3\+)\]\s*", "", event.title).casefold(),
@@ -623,9 +905,17 @@ def main() -> None:
     library, library_errors = library_events(start_day, end_day)
     tcmu, tcmu_errors = tcmu_events(start_day, end_day)
     upcountry, upcountry_errors = upcountry_events(start_day, end_day)
+    city, city_errors = city_events(start_day, end_day)
+    littles_weekly, littles_weekly_errors = littles_weekly_events(start_day, end_day)
+    gcma, gcma_errors = gcma_events(start_day, end_day)
     kidding_around, kidding_around_errors = kidding_around_events(start_day, end_day)
-    errors = library_errors + tcmu_errors + upcountry_errors + kidding_around_errors
-    events = deduplicate(library + tcmu + upcountry + kidding_around)
+    errors = (
+        library_errors + tcmu_errors + upcountry_errors + city_errors
+        + littles_weekly_errors + gcma_errors + kidding_around_errors
+    )
+    events = deduplicate(
+        library + tcmu + upcountry + city + gcma + littles_weekly + kidding_around
+    )
     if not events:
         raise RuntimeError("No events were found; refusing to replace the published feed.")
 
@@ -645,6 +935,9 @@ def main() -> None:
                     "library": len(library),
                     "tcmu": len(tcmu),
                     "upcountry_history_museum": len(upcountry),
+                    "city_of_greenville": len(city),
+                    "littles_weekly_supplemental": len(littles_weekly),
+                    "greenville_county_museum_of_art": len(gcma),
                     "kidding_around_supplemental": len(kidding_around),
                     "m_judson": sum(
                         event.source == "M. Judson Booksellers"
@@ -676,7 +969,9 @@ def main() -> None:
     print(
         f"Published {len(events)} events "
         f"({len(library)} library, {len(tcmu)} TCMU, "
-        f"{len(upcountry)} Upcountry, {len(kidding_around)} Kidding Around supplemental)."
+        f"{len(upcountry)} Upcountry, {len(city)} City, {len(gcma)} GCMA, "
+        f"{len(littles_weekly)} Littles Weekly, "
+        f"{len(kidding_around)} Kidding Around supplemental)."
     )
     for warning in errors:
         print(f"WARNING: {warning}")
