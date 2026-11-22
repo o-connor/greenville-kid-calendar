@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-21T12:28:39.428189-05:00",
-  "window_start": "2026-11-21",
-  "window_end": "2027-01-05",
-  "event_count": 67,
+  "generated_at": "2026-11-22T12:47:59.806729-05:00",
+  "window_start": "2026-11-22",
+  "window_end": "2027-01-06",
+  "event_count": 65,
   "source_counts": {
     "library": 0,
-    "tcmu": 55,
+    "tcmu": 53,
     "upcountry_history_museum": 2,
     "city_of_greenville": 5,
     "littles_weekly_supplemental": 0,
