@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-27T14:27:40.152651-05:00",
-  "window_start": "2026-11-27",
-  "window_end": "2027-01-11",
-  "event_count": 67,
+  "generated_at": "2026-11-28T13:13:20.835261-05:00",
+  "window_start": "2026-11-28",
+  "window_end": "2027-01-12",
+  "event_count": 63,
   "source_counts": {
     "library": 0,
-    "tcmu": 48,
+    "tcmu": 46,
     "upcountry_history_museum": 3,
     "city_of_greenville": 5,
-    "littles_weekly_supplemental": 6,
+    "littles_weekly_supplemental": 4,
     "greenville_county_museum_of_art": 0,
     "kidding_around_supplemental": 6,
     "m_judson": 1,
-    "greenville_zoo": 0,
-    "sc_children_theatre": 4,
+    "greenville_zoo": 1,
+    "sc_children_theatre": 3,
     "downtown_greenville": 1,
     "hughes_main_supplemental": 0
   },
   "warnings": [
-    "Greenville County Museum of Art fetch failed: <urlopen error timed out>"
+    "Greenville County Museum of Art fetch failed: <urlopen error [Errno 104] Connection reset by peer>"
   ]
 }
